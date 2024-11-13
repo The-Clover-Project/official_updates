@@ -5,3 +5,9 @@ Device maintainer: RiteshSahany
 
 ===== 10 November 2024 =====
 * Initial release
+
+===== 13 November 2024 =====
+* Added Circle battery icon
+* Added advanced reboot option
+* Fixed play integrity
+* Added Pitch black theme
