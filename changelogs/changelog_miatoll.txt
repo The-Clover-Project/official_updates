@@ -11,3 +11,10 @@ Device maintainer: RiteshSahany
 * Added advanced reboot option
 * Fixed play integrity
 * Added Pitch black theme
+
+===== 23 November 2024 =====
+* Redesigned Settings UI
+* Added more ThemedIcons
+* Added Hidden SSID preference
+* Added Client manager in Hotspot
+* Various under-the-hood fixes, optimizations and improvements
