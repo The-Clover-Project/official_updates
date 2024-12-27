@@ -18,3 +18,17 @@ Device maintainer: RiteshSahany
 * Added Hidden SSID preference
 * Added Client manager in Hotspot
 * Various under-the-hood fixes, optimizations and improvements
+
+===== 27 December 2024 ====
+* Switched to Launcher3
+* Added Circle To Search
+* Updated Google-sans from komodo AP4A.241205.013
+* Added Play Back Controls
+* Added volte/vowifi icons
+* Added option to switch between 4G & LTE icons
+* Added Data Disabled Indicator icon
+* Added capability to allow tethering to use VPN upstreams
+* Added Incall vibration options
+* Hide ADB and developer setting enable status
+* Animated auto brightness toggle
+* Added formatting & mounting system partition in recovery

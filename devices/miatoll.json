@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1732353315,
-      "filename": "CloverProject-v2.0-miatoll-OFFICIAL-20241123-0917.zip",
-      "id": "5a1d5e410a5c3eaff2a49124069d75224a8acc893091fb7cd4b9bbf5edb1ef72",
-      "size": 2434613259,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/miatoll/CloverProject-v2.0-miatoll-OFFICIAL-20241123-0917.zip/download",
-      "version": "2.0",
+      "datetime": 1735258107,
+      "filename": "CloverProject-v2.1-miatoll-OFFICIAL-20241227-0010.zip",
+      "id": "042de2264dcd689f1ed8d0ad3ebc902a096365efd48bbf5c9de981654af342d1",
+      "size": 2315042441,
+      "url": "https://sourceforge.net/projects/the-clover-project/files/miatoll/CloverProject-v2.1-miatoll-OFFICIAL-20241227-0010.zip/download",
+      "version": "2.1",
       "devicename": "POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite",
       "maintainer": "RiteshSahany"
     }
