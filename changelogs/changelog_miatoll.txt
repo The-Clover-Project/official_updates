@@ -3,21 +3,10 @@ Build type: Stable
 Device: POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
 Device maintainer: RiteshSahany
 
-===== 10 November 2024 =====
-* Initial release
-
-===== 13 November 2024 =====
-* Added Circle battery icon
-* Added advanced reboot option
-* Fixed play integrity
-* Added Pitch black theme
-
-===== 23 November 2024 =====
-* Redesigned Settings UI
-* Added more ThemedIcons
-* Added Hidden SSID preference
-* Added Client manager in Hotspot
-* Various under-the-hood fixes, optimizations and improvements
+===== 02 January 2025 ====
+* Fixed Pure Black Theme
+* Fixed Freezing Issue in Launcher3
+* Fixed Google Lens Intent In QSB
 
 ===== 27 December 2024 ====
 * Switched to Launcher3
@@ -32,3 +21,19 @@ Device maintainer: RiteshSahany
 * Hide ADB and developer setting enable status
 * Animated auto brightness toggle
 * Added formatting & mounting system partition in recovery
+
+===== 23 November 2024 =====
+* Redesigned Settings UI
+* Added more ThemedIcons
+* Added Hidden SSID preference
+* Added Client manager in Hotspot
+* Various under-the-hood fixes, optimizations and improvements
+
+===== 13 November 2024 =====
+* Added Circle battery icon
+* Added advanced reboot option
+* Fixed play integrity
+* Added Pitch black theme
+
+===== 10 November 2024 =====
+* Initial release
