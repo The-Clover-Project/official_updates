@@ -1,0 +1,20 @@
+Highlights & Source Specific Changes:
+Status: Stable
+
+===== 16 January 2025 ====
+
+* Merged January 2025 Security Patch (v2.2)
+* Rebased Launcher3
+* Removed lens option from recents menu (C2S is enough)
+* Overall UI Improvements in Launcher3
+* Updated Branding Images
+* Added Icon Pack Support
+* Disabled Some Broken Pixel Features
+* Redesigned Settings UI
+* Added Force LTE_CA Option
+* Implemented Cutout Force Full Screen
+* Brought back good ol' circle battery style
+* Restored Wifi and Cellular QS Tile
+* Animated Volume Icon When Playing Media
+* Improved Scrolling Cache
+* Updated Advanced Reboot Icons
