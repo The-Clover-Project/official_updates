@@ -1,7 +1,19 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
-===== 16 January 2025 ====
+===== 06 February 2025 =====
+
+* Merged February 2025 Security Patch (v2.3)
+* Added Charging Control
+* Added Live Display Support
+* Added App Lock Support
+* Added Option To Hide Power Menu On Secure Lockscreen
+* Added Double Tap To Trigger Doze Option
+* Misc Improvements to Smartspace
+* Updated About Phone Logo
+* Added New Wallpaper Collections
+
+===== 16 January 2025 =====
 
 * Merged January 2025 Security Patch (v2.2)
 * Rebased Launcher3
