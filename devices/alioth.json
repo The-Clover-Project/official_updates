@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1738252706,
-      "filename": "CloverProject-v2.2-alioth-OFFICIAL-20250130-1603.zip",
-      "id": "99041db2a8c4c21bf5949ee679b04783ad9ad292d509e4922061ecdc8a1607f7",
-      "size": 2220297727,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/alioth/CloverProject-v2.2-alioth-OFFICIAL-20250130-1603.zip/download",
-      "version": "2.2",
-      "devicename": "Poco F3/ Mi 11x",
+      "datetime": 1739011460,
+      "filename": "CloverProject-v2.3-alioth-OFFICIAL-20250208-1046.zip",
+      "id": "3d623b933f0b6c3c03f1c426c5ce24e39d0a0630a32c98e2671793328a7cdc87",
+      "size": 2324489630,
+      "url": "https://sourceforge.net/projects/the-clover-project/files/alioth/CloverProject-v2.3-alioth-OFFICIAL-20250208-1046.zip/download",
+      "version": "v2.3",
+      "devicename": "Poco F3 / Mi 11x",
       "maintainer": "Perses"
     }
   ]

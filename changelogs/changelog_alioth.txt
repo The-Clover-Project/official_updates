@@ -3,6 +3,14 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+==== 8 February 2025 ====
+
+* Enable scroll optimization
+* Optimize app background cache
+* Build libvndfwk_detect_jni.qti.vendor
+* Sync display properties with CodeLinaro
+* Many more
+
 =====  31 January  2025 =====
 
 * Initial Official Build
