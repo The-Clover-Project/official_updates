@@ -3,6 +3,11 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 20 February 2025 =====
+
+* Move to Xiaomi fingerprint AIDL
+* Mute some ims logspam
+* Fix battery cycle count
 
 ===== 08 February 2025 =====
 
