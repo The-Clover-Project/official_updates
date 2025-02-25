@@ -21,10 +21,10 @@
 # -----------------------------
 # User-defined Values
 # -----------------------------
-codename=""       # e.g., miatoll
-devicename=""     # e.g., POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
-maintainer=""     # e.g., RiteshSahany
-zip=""            # e.g., CloverProject-v2.0-miatoll-OFFICIAL-20241110-1248.zip
+codename="fog"       # e.g., miatoll
+devicename="Redmi 10C"     # e.g., POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
+maintainer="Kidz_𝙀𝙒™"     # e.g., RiteshSahany
+zip="CloverProject-v2.3-fog-OFFICIAL-20250224-1611.zip"            # e.g., CloverProject-v2.0-miatoll-OFFICIAL-20241110-1248.zip
 
 # -----------------------------
 # Auto-generated Values

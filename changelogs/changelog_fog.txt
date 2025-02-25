@@ -1,0 +1,11 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Redmi 10C
+Device maintainer: Kidz_𝙀𝙒™
+
+===== 24 February 2025 =====
+
+* Reapply "fog: props: Use AOSP default Codec2/OMX ranks"
+* fog: media: Remove OMX
+* fog: overlay: Set config_avoidGfxAccel to false
+* Drop project quotas: fog user still not ready for this changes (nonsdcardfs)
