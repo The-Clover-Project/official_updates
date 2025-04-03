@@ -6,3 +6,13 @@ Device maintainer: hiroshi. (Superuser)
 =====  28 February 2025 =====
 
 * Initial Official Build
+
+
+===== April 1 2025 =====
+
+* Initial Android 15 QPR2 build
+* Build GlyphAdapter
+* Drop sdrHdrRatio from displayconfig
+* Improve volume glyph
+* Implement torch brightness control
+* Enable powerhint
