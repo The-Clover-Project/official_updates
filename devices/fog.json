@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1740413348,
-      "filename": "CloverProject-v2.3-fog-OFFICIAL-20250224-1611.zip",
-      "id": "49b9b03e17d77a349aca028d8cf2fd7b67e8938e9ef3c2544e8ed898386e5b59",
-      "size": 1942541549,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/fog/CloverProject-v2.3-fog-OFFICIAL-20250224-1611.zip/download",
-      "version": "2.3",
+      "datetime": 1743729535,
+      "filename": "CloverProject-v2.4-fog-OFFICIAL-20250403-2250.zip",
+      "id": "57dca4d85aebb13a58ffa17263f50e4d3cbaca14e0dc075d2ba835434dbf552c",
+      "size":2016230260",
+      "url": "https://sourceforge.net/projects/the-clover-project/files/fog/CloverProject-v2.4-fog-OFFICIAL-20250403-2250.zip/download"
+      "version": "2.4",
       "devicename": "Redmi 10C",
       "maintainer": "Kidz_𝙀𝙒™"
     }

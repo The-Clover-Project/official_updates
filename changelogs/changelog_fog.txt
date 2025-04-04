@@ -1,11 +1,19 @@
 Highlights & Device Specific Changes:
-Build type: Stable
-Device: Redmi 10C
-Device maintainer: Kidz_𝙀𝙒™
+ Build type: Stable
+ Device: Redmi 10C
+ Device maintainer: Kidz_𝙀𝙒™
+ 
+======= 4 April 2025 =======
 
-===== 24 February 2025 =====
+* Initial BP1A ( Android 15 QPR2) Release 
+* fog: Enable LTO and O3 flags
+* Re Enable Project Quotas (SDCARDFS)
+* fog:fstab.zram: bump zram size to 4GB again
 
-* Reapply "fog: props: Use AOSP default Codec2/OMX ranks"
-* fog: media: Remove OMX
-* fog: overlay: Set config_avoidGfxAccel to false
-* Drop project quotas: fog user still not ready for this changes (nonsdcardfs)
+
+ ===== 24 February 2025 =====
+
+ * Reapply "fog: props: Use AOSP default Codec2/OMX ranks"
+ * fog: media: Remove OMX
+ * fog: overlay: Set config_avoidGfxAccel to false
+ * Drop project quotas: fog user still not ready for this changes (nonsdcardfs)
