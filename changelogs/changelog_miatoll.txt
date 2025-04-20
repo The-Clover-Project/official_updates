@@ -3,6 +3,13 @@ Build type: Stable
 Device: POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
 Device maintainer: Arindam Bhattacharjee
 
+===== 20 April 2025 =====
+* Spatial Audio: Enable virtualization effect (Make ordinary sound more immersive)
+* Spatial Audio: Enable binaural & transaural feature
+* Spatial Audio: optimize spatializer effect delay
+* Switch to Lenovo Dolby tuner, for the full Equalizer control
+* Unlocked Netflix HDR-10 support 
+
 ===== 28 March 2025 =====
 
 * Initial QPR2 release
