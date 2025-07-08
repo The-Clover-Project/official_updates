@@ -1,0 +1,8 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Motorola G54 5G / G64 5G
+Device maintainer: Sreejith S
+
+===== 7 july 2025 =====
+
+* Initial Official Build
