@@ -1,0 +1,13 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: POCO F5 / Redmi Note 12 Turbo
+Device maintainer: Dhanush
+
+Device Changelog :
+===== 25 july 2025 =====
+- Dropped overlay: Add FPS info support
+- Fixed lag while music player dragging
+- Move background cpuset to CPU0-1
+- smoother scrolling and better responsiveness
+- new powerhint added
+- new dalvik heap size implemented for performance
