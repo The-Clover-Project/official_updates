@@ -1,6 +1,24 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 10 August 2025 =====
+
+* Android 16 update (v3.1)
+* Redesigned Settings UI
+* System wide UI related changes
+* Optimized and Improved Launcher
+* Added window level blur support
+* Added dimming the wallpaper with night features
+* Redesigned UDFPS icon
+
+===== 18 July 2025 =====
+
+* Initial Android 16 June Update (v3.0)
+* All previous features retained
+* New Quick Settings panel added
+* Added blur effects on settings search bar
+* Smoother animations throughout the UI
+
 ===== 15 June 2025 =====
 
 * A15 QPR2 June Patch Update (v2.7)
