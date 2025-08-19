@@ -3,9 +3,11 @@ Build type: Stable
 Device: Nothing Phone (2)
 Device maintainer: hiroshi. (Superuser)
 
-=====  28 February 2025 =====
+===== 18 August 2025 =====
 
-* Initial Official Build
+* Initial A16 Build
+* Switch to OSS audio stack
+* Build /product as EROFS"
 
 ===== 23 June 2025 =====
 
@@ -15,4 +17,6 @@ Device maintainer: hiroshi. (Superuser)
 * Switch to sony dolby
 * Drop powershare switch and tile (switch to powershare AIDL)
 
-!!! CLEAN FLASH FROM PREVIOUS BUILD IS RECOMMENDED !!!
+===== 28 February 2025 =====
+
+* Initial Official Build
