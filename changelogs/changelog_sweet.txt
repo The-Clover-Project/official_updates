@@ -1,0 +1,9 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Redmi Note 10 Pro / Pro Max
+Device maintainer: Rayyan
+
+===== 21 August 2025 =====
+
+* Initial A16 Build
+
