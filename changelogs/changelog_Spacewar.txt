@@ -1,0 +1,9 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Nothing Phone (1)
+Device maintainer: Aditya
+
+===== 29 August 2025 =====
+
+* Initial Official Build
+* No NOS Camera For Now
