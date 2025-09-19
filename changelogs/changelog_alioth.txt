@@ -3,6 +3,21 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 19 Sep 2025 =====
+
+* Fixed WFD (Wireless Display)
+* Switch to Emanuel's HBM and DC Dimming implementation
+* New codec2 Dolby atoms from Sony (credit: @zenzer0s & @switchoff)
+* Switch To Fakedreamer Kernel (Non-Ksu) (credit: @KaminariKo)
+* Switch to Lieca 5.0 (credit: @johnmart19)
+* Enable ported CLO memory optimizations 
+* Disable backpressure propagation
+* Enable blur support
+* Improve Thermal Profiles and Per-app refresh rate appearance
+* Reduce AOD brightness
+* Silence some spammy logging
+* Many improvements underhood
+
 ===== 17 April 2025 =====
 
 * Cleanup OMX Dependencies for latest sources
