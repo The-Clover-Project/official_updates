@@ -1,6 +1,17 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 19 September 2025 =====
+
+* Android 16 September update (v3.2)
+* AIDL: Initial LiveDisplay sysfs AIDL implementation
+* Added auto-brightness toggle to the new Compose QS brightness slider
+* Added GameSpace (because apparently gaming is life)
+* Implemented "click-to-take" partial screenshot feature
+* Moved 4G, Data Disabled, and Wi-Fi standard icons to Statusbar Tuner
+* Added toggle for privacy indicators
+* Various under-the-hood bug fixes and optimizations 
+
 ===== 10 August 2025 =====
 
 * Android 16 update (v3.1)
