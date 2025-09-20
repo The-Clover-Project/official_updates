@@ -3,6 +3,11 @@ Build type: Stable
 Device: Nothing Phone (2)
 Device maintainer: hiroshi. (Superuser)
 
+===== 20 September 2025 =====
+
+* Remove Gamebar (Game space is built in)
+* Build simulated nothing charge service
+
 ===== 18 August 2025 =====
 
 * Initial A16 Build
