@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1756466847,
-      "filename": "CloverProject-v3.1-Spacewar-OFFICIAL-20250829-1127.zip",
-      "id": "ef993dd8e7af3e3005c7f1fcdc5bf3bbe1bcf8d3641b6622b102f836956bfbd0",
-      "size": 2454961927,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/spacewar/CloverProject-v3.1-Spacewar-OFFICIAL-20250829-1127.zip/download",
-      "version": "3.1",
+      "datetime": 1759223882,
+      "filename": "CloverProject-v3.2-Spacewar-OFFICIAL-20250930-0922.zip",
+      "id": "2fcd520ac0f17f9909a9a24980cf537fa523e89d9eb30f1cabc7e5509c0009eb",
+      "size": 2464978906,
+      "url": "https://sourceforge.net/projects/the-clover-project/files/Spacewar/CloverProject-v3.2-Spacewar-OFFICIAL-20250930-0922.zip/download",
+      "version": "3.2",
       "devicename": "Nothing Phone 1",
       "maintainer": "Aditya"
     }
