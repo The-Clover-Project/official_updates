@@ -1,9 +1,13 @@
-Highlights & Device Specific Changes:
-Build type: Stable
-Device: Nothing Phone (1)
+Highlights & Device Specific Changes: 
+Build type: Stable Device: Nothing Phone (1) 
 Device maintainer: Aditya
 
 ===== 29 August 2025 =====
 
 * Initial Official Build
 * No NOS Camera For Now
+
+===== 30 September 2025 =====
+
+* synced latest source from clover 
+* also synced latest fw from nothing os 3.2
