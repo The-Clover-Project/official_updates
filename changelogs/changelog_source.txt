@@ -1,6 +1,17 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 17 October 2025 =====
+
+* Android 16 October update (v3.3)
+* Updated new bootanimation (credit - Sreejith)
+* Enabled force monochrome icons
+* Added AOD on charge
+* Implemented new flash light strength control
+* Added new edge to edge fullscreen display feature
+* Added new fonts,iconpacks and app icons shapes customisation
+* Various under-the-hood bug fixes and optimizations
+
 ===== 19 September 2025 =====
 
 * Android 16 September update (v3.2)
