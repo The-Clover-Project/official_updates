@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1759337015,
-      "filename": "CloverProject-v3.2-cancunf-OFFICIAL-20251001-1643.zip",
-      "id": "f03b2837eacb6a03dc3a5b96834bcefa9dc16dc6d703af5339de4641a1f6c935",
-      "size": 2710162937,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/cancunf/CloverProject-v3.2-cancunf-OFFICIAL-20251001-1643.zip/download",
-      "version": "3.2",
+      "datetime": 1760846159,
+      "filename": "CloverProject-v3.3-cancunf-OFFICIAL-20251019-0412.zip",
+      "id": "ecccc290005811ecd9b5835365b39c296e9601f1a92b5eac506e946757c1d045",
+      "size": 2722070813,
+      "url": "https://sourceforge.net/projects/the-clover-project/files/cancunf/CloverProject-v3.3-cancunf-OFFICIAL-20251019-0412.zip/download",
+      "version": "v3.3",
       "devicename": "Motorola G54 5G / G64 5G",
       "maintainer": "Sreejith S"
     }
