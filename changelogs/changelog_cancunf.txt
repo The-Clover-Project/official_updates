@@ -3,6 +3,10 @@ Build type: Stable
 Device: Motorola G54 5G/G64 5G
 Device maintainer: Sreejith S
 
+=====  21-OCT-2025 =====
+
+• Fix wakelock being held.
+
 =====  02-OCT-2025 =====
 
 Credits:
