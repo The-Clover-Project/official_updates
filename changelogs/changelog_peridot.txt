@@ -1,7 +1,11 @@
 Highlights & Device Specific Changes:
 Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
-Device maintainer: Blazeee
+Device maintainer: Farrukh2002
+
+===== 27 October 2025 =====
+
+* Initial release 
 
 ===== 30 June 2025 =====
 
