@@ -1,12 +1,12 @@
 {
   "response": [
     {
-      "datetime": 1755865024,
-      "filename": "CloverProject-v3.1-sweet-OFFICIAL-20250821-0206.zip",
-      "id": "852f2a21b4c396bf7f2faf58139ef4674daa26aca2cb3417c388998b615a0dc0",
-      "size": 2771953058,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/sweet/CloverProject-v3.1-sweet-OFFICIAL-20250821-0206.zip/download",
-      "version": "3.1",
+      "datetime": 1761425193,
+      "filename": "CloverProject-v3.3-sweet-OFFICIAL-20251025-2048.zip",
+      "id": "c40c7bb8633a8b6691002815d5103b77d42ee9d7afc054e7b153e906ccf243a8",
+      "size": 2860548215,
+      "url": "https://sourceforge.net/projects/the-clover-project/files/sweet/CloverProject-v3.3-sweet-OFFICIAL-20251025-2048.zip/download",
+      "version": "3.3",
       "devicename": "Xiaomi Redmi Note 10 Pro / Pro Max",
       "maintainer": "Rayyan"
     }

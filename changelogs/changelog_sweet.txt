@@ -7,3 +7,8 @@ Device maintainer: Rayyan
 
 * Initial A16 Build
 
+===== 28 October 2025 =====
+
+* Improved RAM management
+* Switched to Sony dolby
+* Switched to Spiteful Kernel
