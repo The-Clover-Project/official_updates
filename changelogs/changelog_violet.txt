@@ -7,3 +7,30 @@ Device maintainer: RainZ
 
 * Initial A16 Build
 
+===== 31 October 2025 =====
+
+• Sync with latest source
+
+• Rebased the entire device tree on LineageOS 23 sources (clean flash required)
+
+• Fixed Double Tap to Wake (D2TW) and auto-brightness issues
+
+• Addressed excessive heating reported by some users
+
+• Integrated OnePlus Dolby Audio for an enhanced sound experience
+
+• Disabled system-wide blur effects as the device hardware struggles to handle them efficiently
+
+• Updated vendor security patch to June 2025 (in sync with the common tree)
+
+• Enhanced memory management for smoother multitasking
+
+• General UI and stability improvements
+
+• Significant kernel optimizations and refinements for better performance
+
+Credits:
+Huge thanks to:
+• @Joker_V2_0 – for MIUI Camera and related fixes
+• @Under_Frost – for Dolby integration
+• LineageOS Team – for their exceptional contributions to LOS 23
