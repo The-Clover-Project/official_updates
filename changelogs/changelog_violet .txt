@@ -1,9 +1,0 @@
-Highlights & Device Specific Changes:
-Build type: Stable
-Device: Redmi Note 7 pro
-Device maintainer: RainZ
-
-===== 24 September 2025 =====
-
-* Initial A16 Build
-

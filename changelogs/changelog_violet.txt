@@ -1,0 +1,37 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Redmi Note 7 pro
+Device maintainer: RainZ
+
+===== 24 September 2025 =====
+
+* Initial A16 Build
+
+===== 31 October 2025 =====
+
+* Rebased the entire device tree on LineageOS 23 sources for improved stability and long-term maintainability (clean flash required)
+
+* Fixed Double Tap to Wake (D2TW) and auto-brightness issues
+
+* Addressed excessive heating reported by some users
+
+* Integrated OnePlus Dolby Audio for an enhanced sound experience
+
+* Disabled system-wide blur effects as the device hardware struggles to handle them efficiently
+
+* Updated vendor security patch to June 2025 (in sync with the common tree)
+
+* Sync with latest source
+
+* Enhanced memory management for smoother multitasking
+
+* General UI and stability improvements
+
+* Significant kernel optimizations and refinements for better performance
+
+Credits:
+Huge thanks to:
+• @Joker_V2_0 – for MIUI Camera and related fixes
+• @Under_Frost – for Dolby integration
+• LineageOS Team – for their exceptional contributions to LOS 23
+
