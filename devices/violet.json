@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1758644787,
-      "filename": "CloverProject-v3.2-violet-OFFICIAL-20250923-2156.zip",
-      "id": "e1122258eb66642b2a2de1e1f2bb4446dcaa44cc8ddaa47c3fe5a2f95c0b3251",
-      "size": 2887823574,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/violet/CloverProject-v3.2-violet-OFFICIAL-20250923-2156.zip/download",
-      "version": "3.2",
-      "devicename": "Redmi Note 7 pro",
+      "datetime": 1761893043,
+      "filename": "CloverProject-v3.3-violet-OFFICIAL-20251031-0644.zip",
+      "id": "783fe6fcff500f2f65388dc200d28c76f0d8b0bd1999bf9d833b0a832dd6968a",
+      "size": 2905870381,
+      "url": "https://sourceforge.net/projects/the-clover-project/files/violet/CloverProject-v3.3-violet-OFFICIAL-20251031-0644.zip/download",
+      "version": "v3.3",
+      "devicename": "Redmi Note 7 Pro",
       "maintainer": "RainZ"
     }
   ]
