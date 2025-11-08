@@ -3,6 +3,15 @@ Build type: Stable
 Device: POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
 Device maintainer: Arindam Bhattacharjee
 
+===== 08 November 2025 =====
+
+* Update Spatial Audio blobs from cheetah bp2a series
+* Set Spatial Audio threads to highest priority
+* Added back Miui Camera support
+* Added override MockLocation restriction toogle
+* Fixes PermissionController crashes in PlayStore
+* Misc fixes & optimization
+
 ===== 17 June 2025 =====
 
 * Performance improvement
