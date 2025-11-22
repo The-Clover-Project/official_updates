@@ -1,6 +1,11 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 23 November 2025 =====
+
+* Initial Android 16 QPR1 November Update (v3.4)
+* Switched to pixel launcher temporarily
+
 ===== 17 October 2025 =====
 
 * Android 16 October update (v3.3)
