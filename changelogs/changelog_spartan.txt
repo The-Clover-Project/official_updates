@@ -1,0 +1,10 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Realme GT NEO 3T
+Device maintainer: provasish
+
+===== 26 November 2025 =====
+
+* Initial A16 Build
+* Switch to AIDL thermal hal
+* Merged qcom/sm8250
