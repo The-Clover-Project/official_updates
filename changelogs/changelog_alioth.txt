@@ -3,6 +3,19 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 28 Nov 2025 ====
+Initial QPR1 Build
+Switch to NoKernel
+Drop SSR blobs and set SSR restart_level in init.xiaomi.rc
+Define OEM fast charge sysfs node
+Enable QTI Memory Optimization
+Configure custom thermal
+Enhance audio quality
+parts: Move Thermal Settings to System
+Switch to AVC 3.1 for screen recording
+sepolicy: Adress some denials
+Many improvements underhood
+
 ===== 19 Sep 2025 =====
 
 * Fixed WFD (Wireless Display)
