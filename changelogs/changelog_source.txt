@@ -1,6 +1,18 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 03 December 2025 =====
+
+* Android 16 QPR1 December Update (v3.5)
+* Redesigned Settings UI
+* Introduced Force LTE_CA override per subscription
+* Added pure Black theme option for Dark Mode
+* Applied rounded corners across the entire UI
+* Fixed long-press Power button to toggle torch
+* Added double-tap gesture on screen to sleep
+* More optimizations and under-the-hood fixes
+* That wraps up QPR1! See you next month with QPR2 or hopefully even sooner, within the next two weeks
+
 ===== 23 November 2025 =====
 
 * Initial Android 16 QPR1 November Update (v3.4)
