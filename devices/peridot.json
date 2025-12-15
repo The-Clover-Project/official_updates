@@ -1,14 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1761582459,
-      "filename": "CloverProject-v3.3-peridot-OFFICIAL-20251027-1629.zip",
-      "id": "a999530438b993518548cba77337e474c2fc5e20c9cab0bbf47ab857cca96a2f",
-      "size": 3424889695,
-      "url": "https://sourceforge.net/projects/the-clover-project/files/peridot/CloverProject-v3.3-peridot-OFFICIAL-20251027-1629.zip/download",
-      "version": "3.3",
-      "devicename": "Poco F6 / Redmi Turbo 3",
-      "maintainer": "Farrukh2002"
+      "datetime": 1765775478,
+      "filename": "CloverProject-v3.5-peridot-OFFICIAL-20251215-0512.zip",
+      "id": "b9949d5ccb075d0003a1c720cdffe7e60eab4edffb80308bf65286ef578b9d05",
+      "md5": "2e219ad4b5712e0671ec5d70d6aa69fe",
+      "size": 3454425389,
+      "url": "https://get.thecloverproject.com/folder/peridot/3.x/3.5/CloverProject-v3.5-peridot-OFFICIAL-20251215-0512.zip",
+      "version": "3.5"
     }
   ]
 }

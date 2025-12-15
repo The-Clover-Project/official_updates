@@ -3,6 +3,12 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+==== 15 December 2025 ====
+
+* Dropped v819 Adreno blobs
+* Fixed ringtone not coming through Bluetooth headphones on incoming calls.
+* Updated to Latest QPR1 source
+
 ===== 27 October 2025 =====
 
 * Initial release 
