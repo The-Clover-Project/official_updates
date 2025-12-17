@@ -3,6 +3,22 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 16 Dec 2025 =====
+
+* Tune ambient display burn-in protection
+* Fixes: startup crash in Tencent/Unity games
+* rootdir: Restore default swappiness parameters
+* rootdir: Pin msm_irqbalance to system-background
+* sepolicy: Resolve rild denials
+* sepolicy: Address wifi denial
+* sepolicy: Address schedtune
+* sepolicy: Allow usbd binder call
+* Build kernel with LLVM tools
+* Opt out of speaker_layout_channel_mask field
+* Tone down CamX and CHIUSECASE logging
+* Add missing fingerprint object
+* Many improvements underhood
+
 ===== 28 Nov 2025 ====
 Initial QPR1 Build
 Switch to NoKernel
