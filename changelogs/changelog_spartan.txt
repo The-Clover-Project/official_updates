@@ -3,6 +3,7 @@ Build type: Stable
 Device: Realme GT NEO 3T
 Device maintainer: provasish
 
-===== 26 November 2025 =====
+===== 17 December 2025 =====
 
-* Kernel improvements
+* Fixed OPcam
+* Fixed Snapchat camera issue
