@@ -1,6 +1,11 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 13 January 2026 =====
+
+* Android 16 QPR2 January Update (v3.6)
+* Initial Android 16 QPR2 release
+
 ===== 03 December 2025 =====
 
 * Android 16 QPR1 December Update (v3.5)
