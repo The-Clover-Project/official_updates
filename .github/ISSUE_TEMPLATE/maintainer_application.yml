@@ -1,0 +1,126 @@
+name: "Maintainer Application"
+description: "Apply to become a maintainer for The Clover Project."
+title: "[MAINTAINER APPLICATION] - Device Name - Your Name"
+labels: ["maintainer-application"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ![Clover Project Banner](https://raw.githubusercontent.com/The-Clover-Project/official_updates/refs/heads/16/.github/assets/banner.png)
+
+        # Maintainer Application for The Clover Project
+        Thank you for your interest in becoming a maintainer for The Clover Project.
+        Please fill out all fields below. A core team member will review your application.
+
+        ⚠️ **Requirements:**
+        - Please read the [Maintainer Requirements](https://github.com/The-Clover-Project/documentations/blob/15/maintainers_requirements.md)  
+          and the [Device Requirements](https://github.com/The-Clover-Project/documentations/blob/15/device_requirements.md) before applying.
+
+        ❗️ **Notes:**
+        - Device tree bring-up *based on The Clover Project source* is **required**.
+        - Incomplete applications may not be considered.
+
+  - type: input
+    id: maintainer_name
+    attributes:
+      label: "Your Name"
+      description: "Enter your full name or alias."
+      placeholder: "Blaze"
+    validations:
+      required: true
+
+  - type: input
+    id: tg_username
+    attributes:
+      label: "Telegram Username"
+      description: "Enter your Telegram handle."
+      placeholder: "@NotBlazeee28"
+    validations:
+      required: true
+
+  - type: input
+    id: device_name
+    attributes:
+      label: "Device Name"
+      description: "Enter your device name and codename."
+      placeholder: "Poco F6 / Redmi Turbo 3 (peridot)"
+    validations:
+      required: true
+
+  - type: input
+    id: device_tree_link
+    attributes:
+      label: "Device Tree Link"
+      description: "Provide the link to your device tree repository."
+      placeholder: "https://github.com/TheCloverProject-Devices/device_xyz.git"
+    validations:
+      required: true
+
+  - type: input
+    id: vendor_tree_link
+    attributes:
+      label: "Vendor Tree Link"
+      description: "Provide the link to your vendor tree repository."
+      placeholder: "https://github.com/TheCloverProject-Devices/vendor_xyz.git"
+    validations:
+      required: true
+
+  - type: input
+    id: kernel_tree_link
+    attributes:
+      label: "Kernel Tree Link"
+      description: "Provide the link to your kernel tree repository."
+      placeholder: "https://github.com/TheCloverProject-Devices/kernel_xyz.git"
+    validations:
+      required: true
+
+  - type: input
+    id: build_proof
+    attributes:
+      label: "Build Proof"
+      description: "Provide a link to a screenshot or build log proving you successfully built The Clover Project."
+      placeholder: "https://t.me/TheCloverProject_Chat/xyz or https://pastebin.com/xyz"
+    validations:
+      required: true
+
+  - type: textarea
+    id: known_issues
+    attributes:
+      label: "Known Issues & Limitations"
+      description: |
+        List any known issues or hardware limitations with your device build.
+        Be transparent - this helps set user expectations.
+    validations:
+      required: false
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: "ROM Development Experience & Contributions"
+      description: |
+        Briefly describe your experience with ROM development and device maintenance.
+        - ROMs you have worked on or currently maintain.
+        - Relevant skills, contributions, or patches.
+        - Why you want to become a maintainer for The Clover Project.
+      placeholder: "I have maintained XYZ ROM for 2 years..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: maintainer_agreement
+    attributes:
+      label: "Maintainer Agreement"
+      description: "Please confirm that you accept all maintainer responsibilities."
+      options:
+        - label: "I will provide timely updates and fixes for my device."
+          required: true
+        - label: "I will engage with the community and address user feedback."
+          required: true
+        - label: "I will follow The Clover Project's official guidelines and requirements."
+          required: true
+        - label: "I will thoroughly test all builds before releasing them."
+          required: true
+        - label: "I understand that failure to meet maintainer responsibilities may result in removal."
+          required: true
