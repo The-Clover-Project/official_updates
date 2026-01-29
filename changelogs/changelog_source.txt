@@ -1,6 +1,28 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 29 January 2026 =====
+
+* Added build flag option to switch between Pixel Launcher and Launcher3
+* Fully rebased Launcher3
+* Updated recovery images
+* Added roaming indicator support to statusbar tuner
+* Introduced VoLTE, VoWiFi, HD, and Wi-Fi Calling status bar icons
+* Added toggle to disable the “Data Disabled” indicator icon
+* Added option to display 4G icon instead of LTE
+* Added double-tap gesture to trigger Doze mode
+* Added Auto-Brightness toggle in the brightness slider
+* Added brightness slider position and shape customization
+* Added QS tile shape customization support
+* Added support for Advanced Restart options
+* Added override for Mock Location restrictions feature
+* Added edge-to-edge fullscreen display controller feature
+* Added Wi-Fi and Cellular Quick Settings tiles
+* Added Ringer, Sound Mode, and Volume Quick Settings tiles
+* Added Flashlight Strength control
+* Added per-subscription Force LTE-CA (Carrier Aggregation) override support
+* Various under-the-hood bug fixes and optimizations
+
 ===== 13 January 2026 =====
 
 * Android 16 QPR2 January Update (v3.6)
