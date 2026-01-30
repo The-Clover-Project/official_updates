@@ -1,0 +1,13 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Poco X3 Pro
+Device maintainer: sloppe
+
+===== 14 Dec 2025 =====
+
+• Sync with latest source
+• Initial official build
+• Improve statusbar padding
+• fixup! vayu: props: Move some properties around
+• Address fingerprint denials
+• Misc fixes and improvements
