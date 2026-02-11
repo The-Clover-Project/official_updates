@@ -1,6 +1,15 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 11 Feb 2026 =====
+
+ * Option to hide ADB and Developer setting status
+ * Fixed Google Photos spoofing
+ * Added hide screen capture status feature
+ * Unlocked Pixel 3 exclusive wallpaper
+ * Improvement of flashlight strength control UX
+ * Various under-the-hood bug fixes and optimizations 
+
 ===== 29 January 2026 =====
 
 * Added build flag option to switch between Pixel Launcher and Launcher3
