@@ -3,6 +3,24 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 10 Feb 2026 =====
+
+*  Initial QPR2 Build
+*  Switch to e404 kernel (credit: @sk113r)
+*  Switch to  Lunaris Dolby (credit: @GhostRX89)
+*  Patch some blobs to depend on libtinyxml2-v34.so
+*  Address more XiaomiParts denials
+*  Shim WFD with libinput_shim
+*  Update graphics blobs from AOSPA
+*  Add overlay to improve signal reception
+*  Configure display cutout
+*  Enable doze auto brightness on AOD
+*  Defer applying divider
+*  Move thermal profiles to system category
+*  rootdir: dont stop statsd anymore
+*  Fix refresh rate QS tile crash on invalid settings
+*  Do not call configureRpcThreadpool
+
 ===== 16 Dec 2025 =====
 * Tune ambient display burn-in protection
 * Fixes: startup crash in Tencent/Unity games
