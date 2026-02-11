@@ -3,6 +3,14 @@ Build type: Stable
 Device: Realme GT NEO 3T
 Device maintainer: provasish
 
+===== 11 Feb 2026 =====
+* Initial QPR2 Build
+* Patch some blobs to depend on libtinyxml2-v34.so
+* Address some selinux denials
+* Merged los sm8250
+* Update Dolby Atmos
+* Dropped Realme parts
+
 ===== 17 December 2025 =====
 
 * Fixed OPcam
