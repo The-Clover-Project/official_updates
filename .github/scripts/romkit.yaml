@@ -1,0 +1,83 @@
+bot_username: "cloverpost_bot"
+
+rom_name: "TheCloverProject"
+
+website_url: "https://thecloverproject.com"
+
+json_directories:
+  Dir: "./devices"
+
+device_json_structure: {
+  "response": [
+    {
+      "datetime": ,
+      "filename": "",
+      "id": "",
+      "size": ,
+      "url": "",
+      "version": "",
+      "devicename": "",
+      "maintainer": "",
+      "telegram": ""
+    }
+  ]
+}
+
+id_field: "id"
+
+device_info_sources:
+  - name: "devices"
+    type: "github"
+    repo: "The-Clover-Project/TheCloverProject.com"
+    file: "./data/devices.json"
+    structure: [
+      {
+        "id": ,
+        "name": "",
+        "codename": "",
+        "brand": "",
+        "maintainer": "",
+        "status": "",
+        "image": ""
+      }
+    ]
+    lookup_field: "codename"
+    match_from: "bot_codename"
+
+  - name: "team"
+    type: "github"
+    repo: "The-Clover-Project/TheCloverProject.com"
+    file: "./data/team.json"
+    structure: [
+      {
+        "id": ,
+        "name": "",
+        "role": "",
+        "telegram": "",
+        "github": ""
+      }
+    ]
+    lookup_field: "name"
+    match_from: "devices_maintainer"
+
+message_template: |
+  #CloverProject #{bot_codename} #bka
+  The Clover Project v{version} | OFFICIAL
+  📲 : {devices_name} ({bot_codename})
+  📅 : {datetime | dateformat("%d-%b-%Y")}
+  🧑‍💼 : [{team_name}]({team_telegram})
+  
+  [[Download | {website_url}/download/{bot_codename}]]
+
+file_ids_path: "./.github/scripts/file_ids.txt"
+
+banner_path: "./assets/banner.png"
+
+version_repo: "The-Clover-Project/vendor_clover"
+version_file: "config/version.mk"
+version_template: "{PRODUCT_VERSION_MAJOR}.{PRODUCT_VERSION_MINOR}"
+version_field: "version"
+
+device_name_field: "devices_name"
+maintainer_name_field: "team_name"
+maintainer_telegram_field: "team_telegram"
