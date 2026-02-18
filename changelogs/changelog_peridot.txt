@@ -3,6 +3,16 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+==== 18 February 2026 ====
+
+* Drop Dolby Atmos
+* Drop High touch polling rate (temp.)
+* Drop Lineage Fast Charge (temp.)
+* Enable ADPF CPU Hints.
+* Enable frame pacing.
+* Tune Power hint (credits - @zenin1504 )
+* Add Local update option in clover updater.
+
 ==== 15 December 2025 ====
 
 * Dropped v819 Adreno blobs
