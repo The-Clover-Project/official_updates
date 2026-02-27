@@ -2,6 +2,18 @@ Highlights & Device Specific Changes:
 Build type: Stable
 Device: Motorola G54 5G/G64 5G
 Device maintainer: Sreejith S
+Credits: @sarthakroy2002 & @cyberknight777
+
+=====  27-FEB-2026 =====
+
+• Switch to OSS BT audio interfaces.
+• Switch to dummy libaedv.
+• Add EROFS compress hints for relevant partitions in super.
+• Drop ipsec_mon and netdagent HALs as they are redundant after killing RPS.
+• Apply dex2oat optimizations.
+• Rework powerhint based on Motorola's mtkpower hints.
+• Copy keystore permission for Keymint V1.
+• Stop building unneeded dependencies.
 
 =====  23-FEB-2026 =====
 
@@ -58,9 +70,6 @@ Kernel:
 • Fix wakelock being held.
 
 =====  02-OCT-2025 =====
-
-Credits:
-@sarthakroy2002 & @cyberknight777
 
 Device:
 • Update blobs to V1TD35M.83-20-5.
