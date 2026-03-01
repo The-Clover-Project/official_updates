@@ -1,0 +1,16 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Poco X3 Pro
+Device maintainer: ghostedprotocol16
+
+===== 01 March 2026 =====
+
+* Initial QPR2 Build
+* Upstream kernel with LineageOS
+* Address FP denial spam
+* Add refresh rate tile
+* Address some property denials
+
+=====  26 December 2025 =====
+
+* Initial Official Build
