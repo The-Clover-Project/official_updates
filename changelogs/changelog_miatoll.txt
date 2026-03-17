@@ -3,6 +3,14 @@ Build type: Stable
 Device: POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
 Device maintainer: Arindam Bhattacharjee
 
+===== 16 March 2026 =====
+
+* Initial Android 16 QPR2 release
+* Switched to EROFS Partition ( Important: Only use the given recovery)
+* Updated wifi configs from sm8150
+* (Kernel) Updated kernel to Imperial-X r4.0 (Added support for erofs partition)
+* (Kernel) Updated LZ4 to version 1.9.4
+
 ===== 08 November 2025 =====
 
 * Update Spatial Audio blobs from cheetah bp2a series
