@@ -3,6 +3,15 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+==== 09 April 2026 ====
+
+* March 2026 QPR2 Source.
+* Add back High touch polling rate.
+* Drop Libperfmgr in favor of QTI.
+* Add Ulquiorra Manager.
+* Add device modes - Battery, Normal, Performance, Extreme.
+* Drop Local update option in clover updater(temp.).
+
 ==== 18 February 2026 ====
 
 * Drop Dolby Atmos
