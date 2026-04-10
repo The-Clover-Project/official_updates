@@ -1,7 +1,16 @@
 Highlights & Device Specific Changes:
 Build type: Stable
 Device: POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
-Device maintainer: Arindam Bhattacharjee
+Device maintainer: RiteshSahany
+
+===== 10 April 2026 =====
+
+* Improved thermal configs
+* Updated wifi configs from vayu V13.0.5.0.SJUMIXM
+* Updated Carrier Configs from nabu OS1.0.6.0.TKXMIXM
+* Switched to EROFS Partition ( Important: Only use the given recovery)
+* (Kernel) Updated kernel to Imperial-X r4.0 (Added support for erofs partition)
+* (Kernel) Updated LZ4 to version 1.9.4
 
 ===== 16 March 2026 =====
 
