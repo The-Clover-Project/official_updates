@@ -1,0 +1,226 @@
+name: Sync Device Data → Website Repo
+
+# Triggers:
+#   - push: auto-detects changed devices from git diff
+#   - workflow_dispatch: lets maintainers force-sync specific devices by hand
+#
+# Branch name is used to infer the Android version (e.g. branch "16" → Android 16).
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "devices/**.json"
+      - "changelogs/changelog_*.txt"
+
+  workflow_dispatch:
+    inputs:
+      codenames:
+        description: "Space-separated device codenames to force-sync (leave empty to auto-detect)"
+        required: false
+        default: ""
+      android_branch:
+        description: "Android branch / version override (e.g. 16)"
+        required: false
+        default: ""
+
+# Never cancel an in-flight sync — a partial write would corrupt the website repo.
+# Queuing is fine; cancellation is not.
+concurrency:
+  group: sync-website-${{ github.ref }}
+  cancel-in-progress: false
+
+# Principle of least privilege: this workflow only needs to read the OTA repo.
+# The website repo is accessed via a scoped PAT, not GITHUB_TOKEN.
+permissions:
+  contents: read
+
+jobs:
+  # JOB 1: Figure out which devices changed and produce a JSON matrix for Job 2.
+  # Keeping detection in its own job means the matrix is built once, not once
+  # per device — and failures here abort everything cleanly before any writes.
+  prepare:
+    name: Detect changed devices
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    outputs:
+      matrix:      ${{ steps.build-matrix.outputs.matrix }}
+      has_changes: ${{ steps.build-matrix.outputs.has_changes }}
+      branch:      ${{ steps.build-matrix.outputs.branch }}
+
+    steps:
+      # fetch-depth: 0 ensures git diff works correctly even after force-pushes
+      # and squash-merges, unlike the brittle "fetch-depth: 2" pattern.
+      - name: Checkout OTA repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build device matrix
+        id: build-matrix
+        # Safe: inputs are assigned to env vars first, never interpolated directly
+        # into the shell script body (prevents expression-injection attacks).
+        env:
+          MANUAL_CODENAMES: ${{ github.event.inputs.codenames }}
+          MANUAL_BRANCH:    ${{ github.event.inputs.android_branch }}
+        run: |
+          set -euo pipefail
+
+          # Resolve the branch: manual override wins, then the pushed ref.
+          BRANCH="${MANUAL_BRANCH:-${GITHUB_REF_NAME}}"
+          echo "branch=${BRANCH}" >> "$GITHUB_OUTPUT"
+
+          if [[ -n "${MANUAL_CODENAMES}" ]]; then
+            # workflow_dispatch: trust the explicit codename list verbatim.
+            CODENAMES="${MANUAL_CODENAMES}"
+          else
+            # Diff-based detection: handle first commit (no HEAD~1) gracefully.
+            if git rev-parse --verify HEAD~1 &>/dev/null; then
+              CHANGED=$(git diff --name-only HEAD~1 HEAD)
+            else
+              # Very first commit in the repo — treat all matching files as new.
+              CHANGED=$(git ls-files 'devices/*.json' 'changelogs/changelog_*.txt')
+            fi
+
+            echo "Changed files:"
+            echo "${CHANGED}"
+
+            CODENAMES=""
+            while IFS= read -r file; do
+              if   [[ "${file}" =~ ^devices/([^/]+)\.json$ ]]; then
+                CODENAMES="${CODENAMES} ${BASH_REMATCH[1]}"
+              elif [[ "${file}" =~ ^changelogs/changelog_([^/]+)\.txt$ ]]; then
+                CODENAMES="${CODENAMES} ${BASH_REMATCH[1]}"
+              fi
+            done <<< "${CHANGED}"
+          fi
+
+          # Deduplicate, strip blanks, sort deterministically.
+          UNIQUE=$(echo "${CODENAMES}" | tr ' ' '\n' | grep -v '^$' | sort -u || true)
+
+          if [[ -z "${UNIQUE}" ]]; then
+            echo "No OTA JSON or changelog files changed. Nothing to sync."
+            echo "has_changes=false"         >> "$GITHUB_OUTPUT"
+            echo 'matrix={"codename":[]}'    >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Build a JSON object compatible with strategy.matrix (requires `jq`
+          # which is pre-installed on all GitHub-hosted runners).
+          JSON_MATRIX=$(echo "${UNIQUE}" | jq -R . | jq -sc '{codename: .}')
+          echo "Devices to sync: ${UNIQUE}"
+          echo "matrix=${JSON_MATRIX}"  >> "$GITHUB_OUTPUT"
+          echo "has_changes=true"       >> "$GITHUB_OUTPUT"
+
+  # JOB 2: Sync each device.
+  # Matrix strategy runs one job per device — they execute in parallel, so
+  # adding a new device costs zero extra wall-clock time.
+  # fail-fast: false means a single broken device doesn't block the others.
+  sync:
+    name: "Sync: ${{ matrix.codename }}"
+    needs: prepare
+    if: needs.prepare.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+      fail-fast: false
+
+    steps:
+      - name: Checkout OTA repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # Checkout into a fixed subdirectory so the path is predictable and
+      # does not depend on the repository name.
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+        with:
+          repository: The-Clover-Project/TheCloverProject.com
+          token: ${{ secrets.WEBSITE_REPO_PAT }}
+          path: website-repo
+          fetch-depth: 1
+
+      # Pin Python explicitly so the runner OS upgrade never silently changes
+      # language behaviour. cache: pip speeds up runs with dependencies.
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Guard rail: skip gracefully when the website doesn't know this device
+      # yet (e.g. the maintainer hasn't added miatoll.json to the website repo).
+      # Doing this as a dedicated step keeps the run log clean and avoids
+      # relying on the Python script's own file-not-found handling.
+      - name: Check website device file exists
+        id: check
+        env:
+          CODENAME: ${{ matrix.codename }}
+        run: |
+          WEBSITE_JSON="website-repo/data/devices/${CODENAME}.json"
+          if [[ -f "${WEBSITE_JSON}" ]]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::No website JSON found at ${WEBSITE_JSON} — skipping ${CODENAME}"
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run sync script
+        if: steps.check.outputs.exists == 'true'
+        env:
+          OTA_REPO_PATH:     ${{ github.workspace }}
+          WEBSITE_REPO_PATH: ${{ github.workspace }}/website-repo
+          CODENAME:          ${{ matrix.codename }}
+          BRANCH:            ${{ needs.prepare.outputs.branch }}
+        run: |
+          set -euo pipefail
+          # Non-zero exit from sync_device.py propagates here and fails the step.
+          python3 .github/scripts/sync_device.py "${CODENAME}" "${BRANCH}" --keep-builds 3
+
+      # Commit is scoped to a single device file, so concurrent matrix jobs
+      # that push to different files don't conflict.
+      # The retry loop handles the rare case where two jobs finish at exactly
+      # the same time and one needs to rebase before pushing.
+      - name: Commit and push to website repo
+        if: steps.check.outputs.exists == 'true'
+        working-directory: website-repo
+        env:
+          CODENAME:    ${{ matrix.codename }}
+          BRANCH:      ${{ needs.prepare.outputs.branch }}
+          SOURCE_SHA:  ${{ github.sha }}
+          SOURCE_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet; then
+            echo "No changes to commit for ${CODENAME} — already up to date."
+            exit 0
+          fi
+
+          # Stage only this device's file; never accidentally commit stale state.
+          git add "data/devices/${CODENAME}.json"
+
+          git commit \
+            -m "chore(sync): update ${CODENAME} from OTA repo [${BRANCH}]" \
+            -m "Source: ${SOURCE_REPO}@${SOURCE_SHA}" \
+            -m "[skip ci]"
+
+          # Retry push up to 3 times with exponential back-off.
+          # Necessary when multiple matrix jobs push to the website repo
+          # concurrently — the second pusher will need to rebase.
+          for attempt in 1 2 3; do
+            if git pull --rebase && git push; then
+              echo "✓ ${CODENAME} pushed successfully."
+              exit 0
+            fi
+            echo "::warning::Push attempt ${attempt}/3 failed for ${CODENAME}, retrying…"
+            sleep $((attempt * 2))
+          done
+
+          echo "::error::All push attempts failed for ${CODENAME}."
+          exit 1
