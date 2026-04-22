@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1772210504,
-      "filename": "CloverProject-v3.7-cancunf-OFFICIAL-20260227-1641.zip",
-      "id": "728569fe3787058807e75ac775f10f2b27a7500e4715841e69ab17a5a904d237",
-      "md5": "db41f34a7713ebd8deaff3b4dee7c36a",
-      "size": 2685073602,
-      "url": "https://get.thecloverproject.com/folder/cancunf/3.x/3.7-HOTFIX/CloverProject-v3.7-cancunf-OFFICIAL-20260227-1641.zip",
-      "version": "3.7"
+      "datetime": 1776872707,
+      "filename": "CloverProject-v3.9-cancunf-OFFICIAL-20260422-1545.zip",
+      "id": "a93d20c37b73c0b2ce63bf1fbb65614c92dc096db07addd3d03d580abd34fac3",
+      "md5": "0aab46f7d87ed21365f3653648c70692",
+      "size": 2681845525,
+      "url": "https://get.thecloverproject.com/folder/cancunf/3.x/3.9/CloverProject-v3.9-cancunf-OFFICIAL-20260422-1545.zip",
+      "version": "3.9"
     }
   ]
 }
