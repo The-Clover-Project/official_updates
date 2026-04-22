@@ -4,6 +4,23 @@ Device: Motorola G54 5G/G64 5G
 Device maintainer: Sreejith S
 Credits: @sarthakroy2002 & @cyberknight777
 
+=====  22-Apr-2026 =====
+
+• Fixed an issue where USB stops working post boot.
+• Kernel state at r3a3.
+• Update VT vendor stack from bogota W1V036M.85.
+• Release mGestureWakeLock on processEvent() to fix an issue where TapGesture wakelock was never released.
+• Drop OMX completely.
+• Drop rcu_expedited enablement at init.rc.
+• Don't include mediatek-common as a shared lib.
+• Switch to OSS memtrack service.
+• Use AOSP default Codec2/OMX ranks.
+• Remove software omx codec references.
+• Drop vendor.media.omx prop.
+• Update blobs and firmware to V1TDS35M.83-20-5-10.
+• Drop more redundant kernel modules.
+• Kernel state at r3a2.
+
 =====  27-FEB-2026 =====
 
 • Switch to OSS BT audio interfaces.
