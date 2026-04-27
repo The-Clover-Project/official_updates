@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1770794575,
-      "filename": "CloverProject-v3.7-spartan-OFFICIAL-20260211-0723.zip",
-      "id": "17d06658134473635bbfca46c3d44005b5a1b681d7441302284f4deecfa90da2",
-      "md5": "6f5870ebb8892d1e38c17f3e0e058184",
-      "size": 2701650734,
-      "url": "https://get.thecloverproject.com/folder/spartan/3.x/3.7/CloverProject-v3.7-spartan-OFFICIAL-20260211-0723.zip",
-      "version": "3.7"
+      "datetime": 1777301052,
+      "filename": "CloverProject-v3.9-spartan-OFFICIAL-20260427-1445.zip",
+      "id": "cc48c14894aa98dd630c72b38b26eaa4b0b89e0595290a8fccda2e3ff2d50e82",
+      "md5": "cf22fbf7bc29bc8b5493003c23f907c0",
+      "size": 2695347510,
+      "url": "https://get.thecloverproject.com/folder/spartan/3.x/3.9/CloverProject-v3.9-spartan-OFFICIAL-20260427-1445.zip",
+      "version": "3.9"
     }
   ]
 }
