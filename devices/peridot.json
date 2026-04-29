@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1775729301,
-      "filename": "CloverProject-v3.8-peridot-OFFICIAL-20260409-1009.zip",
-      "id": "0fed7e93bae9286fd05834515264df2b56cfca3d7371f77cd308c62792ea5020",
-      "md5": "e36ec22f9400f57da8b5d40f5689fae9",
-      "size": 3589895551,
-      "url": "https://get.thecloverproject.com/folder/peridot/3.x/3.8/CloverProject-v3.8-peridot-OFFICIAL-20260409-1009.zip",
-      "version": "3.8"
+      "datetime": 1777273610,
+      "filename": "CloverProject-v3.9-peridot-OFFICIAL-20260427-0707.zip",
+      "id": "cc3d90021412bbd4a6a794c84d21e3e8de26618e80f4bd81b70efcb324abe22f",
+      "md5": "aab5d6a9c1b263200c13bb4ffa0260a5",
+      "size": 3590433790,
+      "url": "https://get.thecloverproject.com/folder/peridot/3.x/3.9/CloverProject-v3.9-peridot-OFFICIAL-20260427-0707.zip",
+      "version": "3.9"
     }
   ]
 }

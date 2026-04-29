@@ -3,6 +3,12 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+==== 28 April 2026 ====
+
+* Add back Fast charge toggle: Slow, fast, Turbo.
+* Tune ulquiorra performance mode.
+* Pick BLE fixes from Lineage device tree to fix device connectivity.
+
 ==== 09 April 2026 ====
 
 * March 2026 QPR2 Source.
