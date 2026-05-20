@@ -1,6 +1,13 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 20 May 2026 =====
+* Implement Per-app GPU Screen Composition
+* Improved Lockscreen clock animations
+* Update string to May security patch 
+* Redesign About phone UI
+* Under the hood fixes and Optimization
+
 ===== 10 April 2026 =====
 
 * Android 16 QPR2 April Update (v3.9)
