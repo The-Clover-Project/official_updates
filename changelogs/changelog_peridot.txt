@@ -3,6 +3,16 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+==== 21 May 2026 ====
+
+* Adapt ulquiorra modes to be more permissive.
+* Add system level ulquiorra modes tile.
+* Each ulquiorra mode now supports pre defined custom tunable values.
+* Add Bypass charging.
+* Add charge limit (supports 75%-95% values).
+* Split landscape mode support added.
+* Reduced blur intensity of the whole system by 50%.
+
 ==== 28 April 2026 ====
 
 * Add back Fast charge toggle: Slow, fast, Turbo.
