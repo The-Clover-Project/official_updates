@@ -1,6 +1,14 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 07 June 2026 =====
+
+* Android 16 QPR2 June Release
+* Fully Rebased Source
+* Introduced Vanilla Build Support
+* Added TrickyStore Spoofing
+* Numerous Performance, Stability, and Source Optimizations
+
 ===== 20 May 2026 =====
 * Implement Per-app GPU Screen Composition
 * Improved Lockscreen clock animations
