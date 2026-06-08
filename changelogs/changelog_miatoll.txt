@@ -3,6 +3,16 @@ Build type: Stable
 Device: POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite
 Device maintainer: RiteshSahany
 
+===== 08 June 2026 =====
+
+* Switched to AIDL camera provider
+* Fixed IPv4 connectivity issues on IPv6-only carrier networks
+* Bumped kernel BPF version override to 5.10.239
+* Reduced launcher blur radius for improved smoothness
+* Improved GPU performance and responsiveness
+* Note: The GMS variant uses EROFS, while the Vanilla variant uses EXT4
+* Please use the recovery included with your respective build ZIP to ensure proper flashing
+
 ===== 10 April 2026 =====
 
 * Improved thermal configs

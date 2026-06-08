@@ -1,0 +1,15 @@
+{
+  "response": [
+    {
+      "datetime": 1780941113,
+      "filename": "CloverProject-3.11-20260608-OFFICIAL-miatoll-GMS.zip",
+      "id": "5c765370549710ce1f829226d45db6cafef87c23a9c4ec2419d82db226bafda4",
+      "md5": "bebc2831aac192bea5a930464bbc950b",
+      "size": 2911027427,
+      "url": "https://get.thecloverproject.com/folder/miatoll/3.x/3.11/CloverProject-3.11-20260608-OFFICIAL-miatoll-GMS.zip",
+      "version": "3.11",
+      "devicename": "POCO M2 Pro / Redmi Note 9S / Redmi Note 9 Pro / Redmi Note 9 Pro Max / Redmi Note 10 Lite",
+      "maintainer": "RiteshSahany"
+    }
+  ]
+}
