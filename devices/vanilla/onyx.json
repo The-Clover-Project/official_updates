@@ -1,0 +1,15 @@
+{
+  "response": [
+    {
+      "datetime": 1781198476,
+      "filename": "CloverProject-3.11-20260611-OFFICIAL-onyx-VANILLA.zip",
+      "id": "e0f068b6e4c4fe8772f748cb4f0d392d1a9ae11c11e0ca4c297b6824aaa96002",
+      "md5": "00782b47b46ffd71098de027699930a7",
+      "size": 3277024613,
+      "url": "https://get.thecloverproject.com/folder/onyx/3.x/3.11/CloverProject-3.11-20260611-OFFICIAL-onyx-VANILLA.zip",
+      "version": "3.11",
+      "devicename": "POCO F7",
+      "maintainer": "Kaveer"
+    }
+  ]
+}
