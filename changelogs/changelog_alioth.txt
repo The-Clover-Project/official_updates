@@ -3,6 +3,19 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 12 Jun 2026 =====
+
+* sm8250-common: dont stop statsd anymore
+* sm8250-common: parts: Update thermal profiles icons
+* sm8250-common: overlay: Don't turn off WiFi when activating airplane mode
+* Switch to Sony Dolby (credit: @CRUECY)
+* Added new adaptive Leica camera icon
+* sm8250-common: add bypass charging sepolicy rule
+* sm8250-common: parts: add bypass charging toggle
+* sm8250-common: parts: add Bypass charging QS tile
+* sm8250-common: parts: Add safety checks for bypass charging
+* Many improvements underhood
+
 ===== 23 March 2026 =====
 
 * Update some Prebuilts from HyperOS 1.0.5.0 Mi
