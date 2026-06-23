@@ -1,0 +1,11 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: Nothing Phone 3a/Pro
+Device maintainer: NayanYC
+
+==== 20 June 2026 ====
+
+* Initial official build
+* Optimize and improved battery and camera performance
+* Display: Fixed HBM
+* Added haptics in text insertion/selection handle when moved
