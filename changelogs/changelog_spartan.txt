@@ -3,6 +3,9 @@ Build type: Stable
 Device: Realme GT NEO 3T
 Device maintainer: provasish
 
+===== 23 June 2026 ====
+* Merged LOS/qcom sm8250
+
 ===== 27 Apr 2026 =====
 * Merged LOS/qcom sm8250
 * Kernel improvements
