@@ -3,6 +3,18 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+==== 24 June 2026 ====
+
+* Ulquiorra Parts major revamp.
+* Add back Dolby Atmos.
+* Drop invalid perf hints from QTI.
+* Add back missing hint stack in base.
+* Add suppot for Bypass Charging.
+* Add support for charging limiter.
+* Add back support for editing profiles in ulquiorra modes.
+* blobs: Update blobs from OS3.0.6.0.WNPMIXM
+* Add MiCam 6.4 (credits - @AdarshGrewal )
+
 ==== 28 April 2026 ====
 
 * Add back Fast charge toggle: Slow, fast, Turbo.
