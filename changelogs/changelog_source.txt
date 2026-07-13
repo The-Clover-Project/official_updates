@@ -1,6 +1,16 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 14 July 2026 =====
+
+* Android 16 QPR2 July Release
+* Added Double Tap to Sleep on homescreen (works dynamically across all launchers)
+* Implemented burn-in protection for statusbar
+* Misc improvements and optimizations
+* This is the final (EOL) update for Android 16
+* Thank you for your support throughout the Android 16 journey
+* See you very soon with some exciting Android 17 developments
+
 ===== 07 June 2026 =====
 
 * Android 16 QPR2 June Release
