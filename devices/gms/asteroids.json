@@ -1,13 +1,13 @@
 {
-      "response": [
-        {
-            "datetime": 1781977582,
-            "filename": "CloverProject-3.11-20260620-OFFICIAL-asteroids-GMS.zip",
-            "id": "9ca705cc74c9f28ef855600f94fc1c322513735e3b23f5ff414e95c788db7b7d",
-            "md5": "80431c894c36b060632e45493291660e",
-            "size": 2619498809,
-            "url": "https://get.thecloverproject.com/folder/asteroids/3.x/3.11/CloverProject-3.11-20260620-OFFICIAL-asteroids-GMS.zip",
-            "version": "3.11"
-        }
-    ]
+  "response": [
+    {
+      "datetime": 1783973324,
+      "filename": "CloverProject-3.12-20260713-OFFICIAL-asteroids-GMS.zip",
+      "id": "85fd53ce64546d9177da04d31a2acb5dddf5e917b03630ec5d97f1adb6a2ce35",
+      "md5": "7e0942c04d7bd9407d072b6450f33a7b",
+      "size": 2611510935,
+      "url": "https://get.thecloverproject.com/folder/asteroids/3.x/3.12/CloverProject-3.12-20260713-OFFICIAL-asteroids-GMS.zip",
+      "version": "3.12"
+    }
+  ]
 }
