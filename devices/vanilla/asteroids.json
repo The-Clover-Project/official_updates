@@ -1,13 +1,13 @@
 {
-      "response": [
-        {
-            "datetime": 1781982912,
-            "filename": "CloverProject-3.11-20260620-OFFICIAL-asteroids-VANILLA.zip",
-            "id": "f147c5076c3ec6735d80a573a9740cc79b23e5be248c87701da34f04cd033619",
-            "md5": "37f80d1861c0f070558c272c2fb2ffa6",
-            "size": 1669543882,
-            "url": "https://get.thecloverproject.com/folder/asteroids/3.x/3.11/CloverProject-3.11-20260620-OFFICIAL-asteroids-VANILLA.zip",
-            "version": "3.11"
-        }
-    ]
+  "response": [
+    {
+      "datetime": 1783977341,
+      "filename": "CloverProject-3.12-20260713-OFFICIAL-asteroids-VANILLA.zip",
+      "id": "5a5d273e84806a547c6f27c135e40aea46e885819b6e5292946259bfe7e199c0",
+      "md5": "fa1cf5534953714f01d05b510c5b43b1",
+      "size": 1662978739,
+      "url": "https://get.thecloverproject.com/folder/asteroids/3.x/3.12/CloverProject-3.12-20260713-OFFICIAL-asteroids-VANILLA.zip",
+      "version": "3.12"
+    }
+  ]
 }
