@@ -3,6 +3,34 @@ Build type: Stable
 Device: POCO F7
 Device maintainer: Kaveer
 
+===== 15 July 2026 =====
+
+* Overall system smoothness and responsiveness improvements
+* MIUI Camera finally added with Xiaomi-exclusive features
+* Added missing camera sensor blobs
+* Allowed high frame rate (HFR) support for MIUI Camera
+* Allow camera to skip unnecessary HFR checks
+* Switched to Deep Suspend-to-RAM for better standby battery life
+* Enabled Wi-Fi QPower and Deep Sleep simultaneously
+* Switched to 12GB Dalvik heap profile
+* Imported pinned service libraries from AOSPA
+* Added popular game packages to scheduler library list
+* Improved uclamp hinting for better performance efficiency
+* Patched graphics blobs for improved GraphicBuffer allocation
+* Updated Dolby configuration
+* Moved Dolby configuration to device tree
+* Disabled Audio DRC for improved audio output
+* Enabled LTE+ icon globally
+* Enabled Bluetooth auto-connect profiles by default
+* Fixed Gamebar GPU information
+* Disabled verbose camera logs
+* Disabled native stats collection service
+* Disabled iorapd
+* Set hardware revision boot property
+* Added multiple SELinux policy improvements
+* Added additional security hardening
+* Miscellaneous fixes and optimizations
+
 ==== 11 June 2026 ====
 
 * Initial official build
