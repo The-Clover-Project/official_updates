@@ -3,6 +3,12 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+==== 18 July 2026 ====
+
+* Rewrite the whole implementation for bypass mode.
+* Implement Touch Filters mode at display driver level (inspiration - @AdarshGrewal ).
+* Tune little max frequency in Normal mode [ulquiorra] to 2GHz.
+
 ==== 24 June 2026 ====
 
 * Ulquiorra Parts major revamp.

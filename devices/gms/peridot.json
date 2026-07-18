@@ -1,13 +1,14 @@
 {
   "response": [
     {
-      "datetime": 1782276727,
-      "filename": "CloverProject-3.11-20260624-OFFICIAL-peridot-GMS.zip",
-      "id": "2a71022330c371a748295659644555079840bf98062b386813c6963ba6323d01",
-      "md5": "b4146e64de94fcc69810dc21779d8514",
-      "size": 3540877207,
-      "url": "https://get.thecloverproject.com/folder/peridot/3.x/3.11/CloverProject-3.11-20260624-OFFICIAL-peridot-GMS.zip",
-      "version": "3.11",
+      "datetime": 1784368743,
+      "filename": "CloverProject-3.12-20260718-OFFICIAL-peridot-GMS.zip",
+      "id": "af4884e9939f8bf7c2bdd57b30f7c6c9ac46945a6ff38ca20dc025033f8db11d",
+      "md5": "2c9a01ea36ff743038f074af39d82dbc",
+      "size": 3530154752,
+      "url": "https://get.thecloverproject.com/folder/peridot/3.x/3.12/CloverProject-3.12-20260718-OFFICIAL-peridot-GMS.zip",
+      "version": "3.12",
+      "romtype": "official",
       "devicename": "POCO F6/Redmi Turbo 3",
       "maintainer": "Farrukh2002"
     }
