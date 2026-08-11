@@ -1,0 +1,15 @@
+{
+  "response": [
+    {
+      "datetime": 1786435610,
+      "filename": "CloverProject-3.12-20260811-OFFICIAL-rodin-GMS.zip",
+      "id": "1607c2b9589a37850bf5a9e2079f7342457ac1b4be1acfda588e6ea805ba4de7",
+      "md5": "4d701fe31b1e002acad11c56b1681401",
+      "size": 3339390473,
+      "url": "https://get.thecloverproject.com/folder/rodin/3.x/3.12/CloverProject-3.12-20260811-OFFICIAL-rodin-GMS.zip",
+      "version": "3.12",
+      "devicename": "POCO X7 Pro / Redmi Turbo 4",
+      "maintainer": "RAM-UNLOK"
+    }
+  ]
+}

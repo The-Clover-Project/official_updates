@@ -1,0 +1,13 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: POCO X7 Pro / Redmi Turbo 4
+Device maintainer: RAM-UNLOK
+
+===== 11 August 2026 =====
+
+* Fix Xiaomi Parts thermal access and CIT audio denials
+* Tune Surface Flinger
+* Slightly Adjust Auto Brightness to match stock
+* Overhaul power and thermal configurations
+* Update Blobs To OS3.0.301.0.WOJMIXM
+* Fix 5ghz Hotspot
