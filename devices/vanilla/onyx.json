@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1784105927,
-      "filename": "CloverProject-3.12-20260715-OFFICIAL-onyx-VANILLA.zip",
-      "id": "84d53bd0155ef917bc078ca124ecc79714f3c3127febfd2a5d30dc7617cd4106",
-      "md5": "561556ebfc0717200255c463ad81290b",
-      "size": 3378502222,
-      "url": "https://get.thecloverproject.com/folder/onyx/3.x/3.12/CloverProject-3.12-20260715-OFFICIAL-onyx-VANILLA.zip",
-      "version": "3.12",
+      "datetime": 1787812736,
+      "filename": "CloverProject-3.12-20260827-OFFICIAL-onyx-VANILLA.zip",
+      "id": "d0876530194cbecd3787d4f2f159866d60a35d9128e5e310c45b66a8651f640d",
+      "md5": "1d573d2e0a98cd1f7c0e9e6fe74b2d9c",
+      "size": 3355309887,
+      "url": "https://get.thecloverproject.com/folder/onyx/3.x/3.12-HOTFIX/CloverProject-3.12-20260827-OFFICIAL-onyx-VANILLA.zip",
+      "version": "3.12-HOTFIX",
       "devicename": "POCO F7",
       "maintainer": "Kaveer"
     }
