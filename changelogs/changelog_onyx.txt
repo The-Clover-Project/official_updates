@@ -3,6 +3,25 @@ Build type: Stable
 Device: POCO F7
 Device maintainer: Kaveer
 
+===== 28 August 2026 =====
+
+* Significant overall performance, smoothness and responsiveness improvements
+* Fully optimized OSS kernel with source-built kernel, DTBO and modules
+* Major gaming optimizations with improved GPU utilization and GAME mode
+* Significantly improved battery efficiency and standby power management
+* Heavily refined Dolby Audio and audio stack
+* Improved UI rendering, scrolling and multitasking performance
+* Improved UDFPS, touch and sensor handling
+* Improved Wi-Fi power management and connectivity
+* Enabled Wi-Fi QPower and Deep Sleep simultaneously
+* Switched to 12GB Dalvik heap profile
+* Added GameBar with fixed GPU information
+* Improved charging, battery and USB OTG detection
+* Added source-built audio components and improved audio dependencies
+* Updated Xiaomi IR implementation to AIDL
+* Major SELinux, hardware integration and system cleanup
+* Miscellaneous stability, reliability and optimization fixes
+
 ===== 15 July 2026 =====
 
 * Overall system smoothness and responsiveness improvements
