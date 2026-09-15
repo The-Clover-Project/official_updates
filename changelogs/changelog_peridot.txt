@@ -3,6 +3,23 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+=== 14 September 2026 ===
+
+* Introduce standalone Ulquiorra Manager app for better user experience.
+* Improved per-app Xiaomi Touch Tuning.
+* Implement KCAL display colour calibration.
+* Add KCAL color calibration support directly into Snapdragon Display Engine (SDE) driver.
+* Overhaul Ulquiorra UI and decouple the ulquiorrad daemon.
+* Backport Google BBRv3 TCP congestion control and set it as default.
+* Enable UFS HPB for games that are open world and use dynamic loading.
+* Add dynamic root task group CPU boost and disable UBSAN overhead.
+* Disable conflicting Qualcomm perf-lock opcodes in vendor configs.
+* Fix redirecting party number mistakenly appending to incoming caller ID (credits - @AdarshGrewal ).
+* Update Leica / MIUI Camera launcher icons with adaptive vector and themed monochrome icon.
+* Label persist directory for Jiiov optical fingerprint sensor in SELinux.
+* Fix potential sleep/suspend freezes in kernel SMCInvoke.
+* Upstream sync with latest LineageOS kernel, devicetree, and modules.
+
 ==== 18 July 2026 ====
 
 * Rewrite the whole implementation for bypass mode.
