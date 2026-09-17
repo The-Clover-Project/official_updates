@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "datetime": 1786441527,
-      "filename": "CloverProject-3.12-20260811-OFFICIAL-rodin-VANILLA.zip",
-      "id": "6fd8e782fc0dd98e0c4955f4ef666d8031c07cc3149ce707cabeec223cde97cb",
-      "md5": "c6c24c9f1f78bf2622232bd911afb40c",
-      "size": 2282758089,
-      "url": "https://get.thecloverproject.com/folder/rodin/3.x/3.12/CloverProject-3.12-20260811-OFFICIAL-rodin-VANILLA.zip",
-      "version": "3.12",
+      "datetime": 1789495847,
+      "filename": "CloverProject-3.12-20260915-OFFICIAL-rodin-VANILLA.zip",
+      "id": "804afb0958bee93e8adef8a113f83d5a0236722a972950a390eec1954761b367",
+      "md5": "0350fccb3d97d6a0d9ace4e94375ae2b",
+      "size": 2391261298,
+      "url": "https://get.thecloverproject.com/folder/rodin/3.x/3.12-HOTFIX/CloverProject-3.12-20260915-OFFICIAL-rodin-VANILLA.zip",
+      "version": "3.12-HOTFIX",
       "devicename": "POCO X7 Pro / Redmi Turbo 4",
       "maintainer": "RAM-UNLOK"
     }
