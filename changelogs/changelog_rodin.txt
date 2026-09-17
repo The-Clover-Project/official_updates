@@ -3,6 +3,33 @@ Build type: Stable
 Device: POCO X7 Pro / Redmi Turbo 4
 Device maintainer: RAM-UNLOK
 
+===== 19 October 2026 =====
+
+* Update blobs to OS3.0.303.0.WOJMIXM
+* Updated MIUI Camera to v6.7.000070.0 ( leica features added )
+* Reduce blur radius for better performance
+* Addressed camera SELinux denials properly for enforcing user builds
+* Added Fenrir source patches
+* Reverted broken AI tuning and re-aligned with stock MTK configurations
+* Re-optimized SurfaceFlinger composition and virtual display pipeline
+* Enabled MTK GED KPI
+* Reverted Linux CMA memory allocation increase back from 512M
+* Relaxed thermal limits and fine-tuned CPU throttling thresholds
+* Synced power hints and cgroup configurations with lineage-libperfmgr AIDL states
+* Boosted CPU/GPU frequency floors for expensive rendering and camera recording to eliminate frame drops
+* Tuned uclamp caps and allowed system-background cpuset to utilize all cores
+* Updated device marketing name and model to POCO X7 Pro
+* Set the correct parameter for Bluetooth A2DP suspend
+* Correctly labeled fdsd persist directory for Xiaomi MTD service in sepolicy
+* Added dynamic animation size and offset calculations for UDFPS
+* Switch to prebuilt WiFi HAL
+* Drop MediaTek thermal core
+* Adjust physical power button location
+* Configured per-refresh-rate SurfaceFlinger durations
+* Added bypass charge
+* Import ADPF profiles and display tuning from frankel
+* Split parts_app policy for Treble compliance
+
 ===== 11 August 2026 =====
 
 * Fix Xiaomi Parts thermal access and CIT audio denials

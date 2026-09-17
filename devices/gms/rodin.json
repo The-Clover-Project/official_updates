@@ -1,0 +1,19 @@
+{
+  "response": [
+    {
+      "datetime": 1792344029,
+      "filename": "CloverProject-4.0-20261018-OFFICIAL-rodin-GMS.zip",
+      "id": "a9660f5ec6af75dbf921431f5ce186735f30a820c75465e3751514e36a925fe4",
+      "md5": "788cf05afadfc8beb08156a7f1ee5e93",
+      "size": 3714492770,
+      "url": "https://ota.thecloverproject.com/rodin/4.0/CloverProject-4.0-20261018-OFFICIAL-rodin-GMS.zip",
+      "version": "4.0",
+      "romtype": "official",
+      "devicename": "POCO X7 Pro / Redmi Turbo 4",
+      "maintainer": "RAM-UNLOK",
+      "os_sdk_level": 37,
+      "os_patch_level": "2026-10-05",
+      "ota_property_files": "payload_metadata.bin:5145:137647,payload.bin:5145:3714484191,payload_properties.txt:3714489394:156,apex_info.pb:2367:1581,care_map.pb:3995:1103,metadata:69:687,metadata.pb:824:1495"
+    }
+  ]
+}
