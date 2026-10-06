@@ -1,6 +1,13 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 06 Oct 2026 =====
+
+* Android 17 QPR0 Oct Release
+* Retained the majority of features from the previous update.
+* Introducing Sprout mascot
+* Rewritten TrickyStore from scratch for a better hide mechanism
+
 ===== 14 July 2026 =====
 
 * Android 16 QPR2 July Release
