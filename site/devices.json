@@ -1,5 +1,24 @@
 [
   {
+    "codename": "peridot",
+    "name": "POCO F6 / Redmi Turbo 3",
+    "brand": "Poco & Redmi",
+    "maintainer": {
+      "name": "Farrukh2002",
+      "githubUrl": "https://github.com/Farrukh2002"
+    },
+    "image": "images/devices/peridot.png",
+    "heroImage": "images/devices/download/peridot.png",
+    "released": true,
+    "version": "4.0",
+    "datetime": 1791650879,
+    "variants": [
+      "gms",
+      "vanilla"
+    ],
+    "changelog": "changelog_peridot.txt"
+  },
+  {
     "codename": "alioth",
     "name": "Mi 11x / Poco F3",
     "brand": "Mi & Poco",
@@ -126,22 +145,6 @@
     "datetime": null,
     "variants": [],
     "changelog": "changelog_munch.txt"
-  },
-  {
-    "codename": "peridot",
-    "name": "POCO F6 / Redmi Turbo 3",
-    "brand": "Poco & Redmi",
-    "maintainer": {
-      "name": "Farrukh2002",
-      "githubUrl": "https://github.com/Farrukh2002"
-    },
-    "image": "images/devices/peridot.png",
-    "heroImage": "images/devices/download/peridot.png",
-    "released": false,
-    "version": null,
-    "datetime": null,
-    "variants": [],
-    "changelog": "changelog_peridot.txt"
   },
   {
     "codename": "onyx",
