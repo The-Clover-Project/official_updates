@@ -3,7 +3,7 @@ Build type: Stable
 Device: Nothing Phone 3a/Pro
 Device maintainer: NayanYC
 
-=== 12/09/26 ===
+=== 10/10/26 ===
 
 * October Security Patch
 * Upstream kernel (6.6.114 -> 6.6.144) 
