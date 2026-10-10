@@ -1,0 +1,50 @@
+{
+  "name": "POCO X7 Pro / Redmi Turbo 4",
+  "brand": "POCO & Redmi",
+  "tagline": "Experience the perfect blend of performance and customization with our Pixel-inspired custom ROM for your device.",
+  "maintainer": {
+    "name": "RAM-UNLOK",
+    "githubUrl": "https://github.com/RAM-UNLOK"
+  },
+  "installationGuide": {
+    "steps": [
+      {
+        "title": "Pre-requisites",
+        "description": "• <b>Firmware:</b> If coming from Modded Stock or HOS2, it is highly recommended to flash the latest HOS3 first before installing this ROM.<br>• <b>Clean Flash is MANDATORY</b> (due to new signing keys)."
+      },
+      {
+        "title": "Step 1: Flash Boot Images",
+        "description": "Connect your device in Fastboot mode and run:<pre><code>fastboot flash vendor_boot vendor_boot.img\nfastboot flash boot boot.img</code></pre>"
+      },
+      {
+        "title": "Step 2: Enter Recovery",
+        "description": "Press Volume Up + Power."
+      },
+      {
+        "title": "Step 3: Factory Reset",
+        "description": "Go to <b>Factory Reset</b> -> <b>Format Data/Factory Reset</b>."
+      },
+      {
+        "title": "Step 4: Prepare Sideload",
+        "description": "Go to <b>Apply Update</b> -> <b>Apply from ADB</b>."
+      },
+      {
+        "title": "Step 5: Sideload ROM",
+        "description": "From your computer using:<pre><code>adb sideload filename.zip</code></pre>"
+      },
+      {
+        "title": "Step 6: Reboot to Recovery",
+        "description": "You will be asked: <i>'Reboot to recovery?'</i> -> Select <b>YES</b>."
+      },
+      {
+        "title": "Step 7: Finish",
+        "description": "Once back in recovery, select <b>Reboot System Now</b>."
+      },
+      {
+        "title": "Pro-Tips",
+        "description": "• If your fod sensors or speaker feel uncalibrated after the first boot, go to <b>Settings > Xiaomi Parts</b> to calibrate them.<br>• The first Day You May Feel Heating, Battery Drain and Laggy. Please be patient!"
+      }
+    ],
+    "warning": "Clean Flash is MANDATORY (due to new signing keys). Incorrect installation may brick your device. Proceed at your own risk."
+  }
+}

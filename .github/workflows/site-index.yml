@@ -1,0 +1,46 @@
+name: Site index
+
+on:
+  push:
+    branches:
+      - "17"
+    paths:
+      - "devices/**"
+      - "changelogs/**"
+      - "site/devices/**"
+      - "site/images/**"
+      - ".github/scripts/build_site_index.py"
+      - ".github/workflows/site-index.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-index
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: python .github/scripts/build_site_index.py
+
+      - name: Commit index
+        run: |
+          if git diff --quiet -- site/devices.json; then
+            echo "site/devices.json is up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/devices.json
+          git commit -m "site: update devices index"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

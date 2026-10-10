@@ -1,0 +1,38 @@
+{
+  "name": "Motorola G54/G64",
+  "brand": "Motorola",
+  "tagline": "Experience the perfect blend of performance and customization with our Pixel-inspired custom ROM for your device.",
+  "maintainer": {
+    "name": "Sreejith S",
+    "githubUrl": "https://github.com/sreejith7676"
+  },
+  "installationGuide": {
+    "steps": [
+      {
+        "title": "Unlock Bootloader",
+        "description": "Ensure your device's bootloader is unlocked before proceeding."
+      },
+      {
+        "title": "Download the relevant files",
+        "description": "download the following files ROM zip and Initial install zip (The initial install zip has the boot and vendor_boot images bundled together)."
+      },
+      {
+        "title": "Flash the initial install zip",
+        "description": "Turn off your device, push and hold the power and volume down button at the same time and release once the phone has booted into the Bootloader Mode. Open a Terminal / Command Prompt and run:<pre><code>fastboot reboot fastboot</code></pre> Moving on, type:<pre><code>fastboot --skip-reboot update</code></pre>and then drag-and-drop the initial install zip into the terminal and run it."
+      },
+      {
+        "title": "Format Data",
+        "description": "Once it has flashed without any errors, you may proceed by running:<pre><code>fastboot reboot recovery</code></pre> Then you can choose the Factory reset option on your device to format the /data partition."
+      },
+      {
+        "title": "Flash Clover ROM",
+        "description": "Select apply update using sideload & install the ROM by typing:<pre><code>adb sideload CloverProject*.zip</code></pre>"
+      },
+      {
+        "title": "Reboot",
+        "description": "The first boot may take a few minutes. Enjoy Clover!"
+      }
+    ],
+    "warning": "Incorrect installation may brick your device. We are not responsible for any damage to your device. Proceed at your own risk."
+  }
+}

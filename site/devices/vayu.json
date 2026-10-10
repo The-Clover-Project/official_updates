@@ -1,0 +1,38 @@
+{
+  "name": "Poco X3 Pro",
+  "brand": "Poco",
+  "tagline": "Experience the perfect blend of performance and customization with our Pixel-inspired custom ROM for your device.",
+  "maintainer": {
+    "name": "sloppe",
+    "githubUrl": "https://github.com/GhostedProtocol16"
+  },
+  "installationGuide": {
+    "steps": [
+      {
+        "title": "Unlock Bootloader",
+        "description": "Ensure your device's bootloader is unlocked before proceeding."
+      },
+      {
+        "title": "Connection",
+        "description": "Open CMD or Terminal on your PC and connect your phone via USB with usb debugging enabled."
+      },
+      {
+        "title": "Reboot To Recovery",
+        "description": "Reboot into Recovery typing:<pre><code>adb reboot recovery</code> or holding power + volume up button.</pre>"
+      },
+      {
+        "title": "Flash Clover ROM",
+        "description": "Flash clover rom through Clover recovery using sideload or through internal storage."
+      },
+      {
+        "title": "Wipe Data",
+        "description": "In recovery, click on factory reset and then do format data or reboot to fastboot and type <code>fastboot -w</code> (recommended)."
+      },
+      {
+        "title": "Reboot",
+        "description": "The first boot may take a few minutes. Enjoy Clover!"
+      }
+    ],
+    "warning": "Incorrect installation may brick your device. We are not responsible for any damage to your device. Proceed at your own risk."
+  }
+}

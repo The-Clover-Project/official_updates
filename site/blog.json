@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Welcome to the New Clover Project Blog!",
+    "date": "July 8, 2025",
+    "author": "Ritesh Sahany",
+    "category": "Announcements",
+    "excerpt": "Welcome to our brand new home! We're thrilled to launch our new website and this blog, which will be your go-to source for all things Clover.",
+    "content": "Welcome to our brand new home! We're thrilled to launch our new website and this blog, which will be your go-to source for all things Clover.\n\nOur goal with this new platform is to increase transparency and bring our community closer to the development process. Here, you can expect to find official announcements, deep dives into new features, monthly progress reports, and spotlights on our dedicated community members.\n\nThank you for being part of this journey. We're excited for what's to come!"
+  },
+  {
+    "id": 2,
+    "title": "Android 16 Is Here!",
+    "date": "July 18, 2025",
+    "author": "Ritesh Sahany",
+    "category": "Announcements",
+    "excerpt": "We are pleased to announce the rollout of Android 16 (Baklava), delivering a more refined, responsive, and secure user experience.",
+    "content": "We are pleased to announce the rollout of Android 16 (Baklava), delivering a more refined, responsive, and secure user experience.\n\nThis release retains all the core features from previous Android versions while introducing a redesigned Quick Settings panel that offers a cleaner layout, improved accessibility, and smoother transitions. With comprehensive system optimizations and enhanced animation fluidity, users can expect noticeably improved performance across daily interactions. Android 16 also incorporates the latest security patches, reinforcing device integrity and user privacy. Whether you're navigating the interface, multitasking, or enjoying media, Android 16 ensures a seamless and polished experience throughout.\n\nSo buckle up, Android 16 is here and it's time to start the party!!"
+  }
+]

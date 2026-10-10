@@ -1,0 +1,46 @@
+{
+  "name": "POCO M2 Pro / Redmi Note 9S / 9 Pro / 9 Pro Max / 10 Lite",
+  "brand": "Redmi & Poco",
+  "tagline": "Experience the perfect blend of performance and customization with our Pixel-inspired custom ROM for your device.",
+  "maintainer": {
+    "name": "RiteshSahany",
+    "githubUrl": "https://github.com/RiteshSahany"
+  },
+  "installationGuide": {
+    "steps": [
+      {
+        "title": "Unlock Bootloader",
+        "description": "Ensure your device's bootloader is unlocked before proceeding."
+      },
+      {
+        "title": "Reboot To Fastboot",
+        "description": "Reboot to Fastboot by pressing Vol Down + Power Button."
+      },
+      {
+        "title": "Connection",
+        "description": "Open CMD or Terminal on your PC and connect your phone via USB."
+      },
+      {
+        "title": "Flash Recovery",
+        "description": "Flash recovery by typing:<pre><code>fastboot flash recovery recovery*.img</code></pre>"
+      },
+      {
+        "title": "Reboot To Recovery",
+        "description": "Reboot into Recovery typing:<pre><code>fastboot reboot recovery</code></pre>"
+      },
+      {
+        "title": "Wipe Data",
+        "description": "In recovery, click on factory reset and then do format data."
+      },
+      {
+        "title": "Flash Clover ROM",
+        "description": "Select apply update using sideload & install the ROM by typing:<pre><code>adb sideload CloverProject*.zip</code></pre>"
+      },
+      {
+        "title": "Reboot",
+        "description": "The first boot may take a few minutes. Enjoy Clover!"
+      }
+    ],
+    "warning": "Incorrect installation may brick your device. We are not responsible for any damage to your device. Proceed at your own risk."
+  }
+}

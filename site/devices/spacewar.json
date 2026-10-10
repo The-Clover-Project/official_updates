@@ -1,0 +1,78 @@
+{
+  "name": "Nothing Phone 1",
+  "brand": "Nothing",
+  "tagline": "Experience the perfect blend of performance and customization with our Pixel-inspired custom ROM for your device.",
+  "maintainer": {
+    "name": "Aditya",
+    "githubUrl": "https://github.com/adityayyy"
+  },
+  "installationGuide": {
+    "steps": [
+      {
+        "title": "Unlock Bootloader",
+        "description": "Ensure your device's bootloader is unlocked before proceeding."
+      },
+      {
+        "title": "Extract Boot & Vendor Boot",
+        "description": "Extract <code>boot.img</code> and <code>vendor_boot.img</code> from the ROM file."
+      },
+      {
+        "title": "Install Platform Tools",
+        "description": "Download and install the latest Android Platform Tools on your PC."
+      },
+      {
+        "title": "Open Command Window",
+        "description": "In the platform-tools folder, search for <code>cmd</code> and hit Enter (or Shift + Right Click → Open PowerShell Window)."
+      },
+      {
+        "title": "Connect Phone",
+        "description": "Connect your phone to the PC using a USB cable."
+      },
+      {
+        "title": "Check ADB Connection",
+        "description": "Verify device connection by typing:<pre><code>adb devices</code></pre>"
+      },
+      {
+        "title": "Reboot to Bootloader",
+        "description": "Enter Fastboot mode by typing:<pre><code>adb reboot bootloader</code></pre>"
+      },
+      {
+        "title": "Check Fastboot Connection",
+        "description": "Confirm Fastboot connection by typing:<pre><code>fastboot devices</code></pre>"
+      },
+      {
+        "title": "Wipe Data",
+        "description": "Wipe data by typing:<pre><code>fastboot -w</code></pre>"
+      },
+      {
+        "title": "Flash Boot",
+        "description": "Flash the extracted boot image:<pre><code>fastboot flash boot boot.img</code></pre>"
+      },
+      {
+        "title": "Flash Vendor Boot",
+        "description": "Flash the extracted vendor boot image:<pre><code>fastboot flash vendor_boot vendor_boot.img</code></pre>"
+      },
+      {
+        "title": "Reboot to Recovery",
+        "description": "Enter recovery mode by typing:<pre><code>fastboot reboot recovery</code></pre>"
+      },
+      {
+        "title": "Apply Update",
+        "description": "In recovery, click on <b>Apply update from ADB</b>."
+      },
+      {
+        "title": "Sideload ROM",
+        "description": "Install the ROM via sideload:<pre><code>adb sideload Rom.zip</code></pre>"
+      },
+      {
+        "title": "Format Data",
+        "description": "After sideloading, perform a <b>Format Data</b> in recovery."
+      },
+      {
+        "title": "Reboot System",
+        "description": "Reboot your device. The first boot may take a few minutes. Use the circle search to get started."
+      }
+    ],
+    "warning": "Incorrect installation may brick your device. We are not responsible for any damage to your device. Proceed at your own risk."
+  }
+}
