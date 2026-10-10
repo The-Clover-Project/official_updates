@@ -20,7 +20,7 @@ PUBLIC_BASE_URL = "https://ota.thecloverproject.com"
 AUTH_URL = "https://api.backblazeb2.com/b2api/v3/b2_authorize_account"
 DEFAULT_ENV_FILE = "~/.config/clover/b2.env"
 FILENAME_PATTERN = re.compile(
-    r"^CloverProject-(?P<version>[^-]+)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$",
+    r"^CloverProject-(?P<version>[^-]+(?:-HOTFIX\d*)?)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$",
     re.IGNORECASE,
 )
 RETRY_STATUSES = {401, 408, 429, 500, 503}
@@ -226,7 +226,7 @@ class B2:
 def parse_zip_name(path):
     match = FILENAME_PATTERN.match(Path(path).name)
     if not match:
-        sys.exit(f"{Path(path).name}: name must look like CloverProject-<version>-<yyyymmdd[_hhmmss]>-OFFICIAL-<codename>-<GMS|VANILLA>.zip")
+        sys.exit(f"{Path(path).name}: name must look like CloverProject-<version>[-HOTFIX[n]]-<yyyymmdd[_hhmmss]>-OFFICIAL-<codename>-<GMS|VANILLA>.zip")
     return match.groupdict()
 
 
@@ -237,6 +237,20 @@ def read_ota_metadata(path):
         except KeyError:
             return {}
     return dict(line.split("=", 1) for line in text.splitlines() if "=" in line)
+
+
+def optional_metadata(metadata):
+    values = {}
+    sdk = metadata.get("post-sdk-level", "").strip()
+    if sdk.isdigit():
+        values["os_sdk_level"] = int(sdk)
+    patch = metadata.get("post-security-patch-level", "").strip()
+    if patch:
+        values["os_patch_level"] = patch
+    files = metadata.get("ota-property-files", "").strip()
+    if files:
+        values["ota_property_files"] = files
+    return values
 
 
 def hash_file(path, size):
@@ -276,12 +290,12 @@ def verify_public(url, size):
     return False
 
 
-def device_details(repo, codename, variant, args):
+def device_details(repo, codename, device, variant, args):
     info_path = repo / "site" / "devices" / f"{codename}.json"
     info = json.loads(info_path.read_text()) if info_path.is_file() else {}
     current = {}
     for name in (variant, "gms", "vanilla"):
-        path = repo / "devices" / name / f"{codename}.json"
+        path = repo / "devices" / name / f"{device}.json"
         if path.is_file():
             current = (json.loads(path.read_text()).get("response") or [{}])[0]
             break
@@ -333,7 +347,7 @@ def main():
         ),
     )
     parser.add_argument("zips", nargs="+", help="OTA zip files (GMS and/or Vanilla)")
-    parser.add_argument("--version", help="version for the folder and the JSON, for example 4.0-HOTFIX (default: from the zip name)")
+    parser.add_argument("--version", help="version for the folder and the JSON; it must be the same as the version in the zip name, for example 4.0-HOTFIX")
     parser.add_argument("--devicename", help="device name for the JSON (default: site/devices/<codename>.json)")
     parser.add_argument("--maintainer", help="maintainer for the JSON (default: current JSON or site/devices/<codename>.json)")
     parser.add_argument("--repo", default=Path(__file__).resolve().parents[1], type=Path, help="official_updates checkout (default: this repo)")
@@ -350,7 +364,8 @@ def main():
         if not path.is_file():
             sys.exit(f"{zip_path}: file not found")
         parsed = parse_zip_name(path)
-        codename = parsed["codename"].lower()
+        device = parsed["codename"]
+        codename = device.lower()
         variant = parsed["variant"].lower()
         metadata = read_ota_metadata(path)
         if not metadata.get("post-timestamp"):
@@ -359,14 +374,18 @@ def main():
         if codename not in devices:
             sys.exit(f"{path.name}: zip is for {metadata.get('pre-device')}, not {codename}")
         version = args.version or parsed["version"]
-        devicename, maintainer = device_details(args.repo, codename, variant, args)
+        if version != parsed["version"]:
+            sys.exit(f"{path.name}: --version {version} is not the version in the zip name ({parsed['version']})")
+        devicename, maintainer = device_details(args.repo, codename, device, variant, args)
         releases.append({
             "path": path,
             "codename": codename,
+            "device": device,
             "variant": variant,
             "version": version,
             "romtype": parsed["romtype"].lower(),
             "datetime": int(metadata["post-timestamp"]),
+            "metadata": metadata,
             "devicename": devicename,
             "maintainer": maintainer,
             "remote": f"{codename}/{version}/{path.name}",
@@ -412,7 +431,8 @@ def main():
             "devicename": release["devicename"],
             "maintainer": release["maintainer"],
         }
-        output = args.repo / "devices" / release["variant"] / f"{release['codename']}.json"
+        entry.update(optional_metadata(release["metadata"]))
+        output = args.repo / "devices" / release["variant"] / f"{release['device']}.json"
         if args.dry_run:
             log(f"  dry run: would write {output}")
             log(json.dumps(entry, indent=2))
@@ -428,10 +448,10 @@ def main():
             prune(b2, codename, args.keep, current, args.dry_run)
 
     if not args.dry_run:
-        changed = sorted({f"devices/{r['variant']}/{r['codename']}.json" for r in releases})
-        log("\nNext: update the changelog, then commit and push to branch 17:")
+        changed = sorted({f"devices/{r['variant']}/{r['device']}.json" for r in releases})
+        log(f"\nNext: update changelogs/changelog_{releases[0]['device']}.txt, then commit and push to branch 17:")
         log(f"  git add {' '.join(changed)} changelogs/")
-        log(f"  git commit -m \"{releases[0]['codename']}: {releases[0]['version']}\"")
+        log(f"  git commit -m \"{releases[0]['device']}: {releases[0]['version']}\"")
         log("  git push origin 17")
 
 

@@ -14,11 +14,11 @@ def load(path):
 
 
 def latest_build(variant, codename):
-    path = ROOT / "devices" / variant / f"{codename}.json"
-    if not path.is_file():
-        return None
-    response = load(path).get("response") or []
-    return response[0] if response else None
+    for path in sorted((ROOT / "devices" / variant).glob("*.json")):
+        if path.stem.lower() == codename.lower():
+            response = load(path).get("response") or []
+            return response[0] if response else None
+    return None
 
 
 def normalize(url):

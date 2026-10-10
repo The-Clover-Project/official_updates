@@ -12,6 +12,7 @@ on:
     paths:
       - "devices/**"
       - "changelogs/**"
+      - "ota/**"
 
 concurrency:
   group: pr-check-${{ github.event.pull_request.number }}
