@@ -8,11 +8,12 @@ Device maintainer: NayanYC
 * October Security Patch
 * Upstream kernel (6.6.114 -> 6.6.144) 
 * Switch to Qualcomm Perf2 PowerHALs
-* Disabled CLO specific features not applicable to PixelOS
+* Disabled CLO specific features not applicable to AOSP
 * Allowed SurfaceFlinger to use the big cluster
 * Improved overall smoothness & system stability
 * Fixed green tint issue when using fingerprint on adaptive refresh rate
 * Fixed Dolby crashes
+* Added Assist Key to customize essential key
 * Initial A17 release
 * Updated firmware to Asteroids_B4.1-260810-1153
 
