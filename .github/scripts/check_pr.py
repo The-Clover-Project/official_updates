@@ -26,6 +26,7 @@ TRUSTED = {"OWNER", "MEMBER", "COLLABORATOR"}
 KEYS = ["datetime", "filename", "id", "md5", "size", "url", "version", "romtype", "devicename", "maintainer"]
 DEVICE_PATH = re.compile(r"^devices/(gms|vanilla)/([a-z0-9][a-z0-9_.-]*)\.json$")
 CHANGELOG_PATH = re.compile(r"^changelogs/changelog_([A-Za-z0-9][A-Za-z0-9_.-]*)\.txt$")
+SITE_PATH = re.compile(r"^site/devices/([a-z0-9][a-z0-9_.-]*)\.json$")
 FILENAME = re.compile(
     r"^CloverProject-(?P<version>[^-]+)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$"
 )
@@ -90,17 +91,26 @@ class Report:
         return not self.errors
 
 
-def verify_download(url, size, sha256, md5, attempts=3):
+def verify_download(url, size, sha256, md5, attempts=5):
+    sha = hashlib.sha256()
+    digest = hashlib.md5()
+    total = 0
     last = ""
     for attempt in range(attempts):
+        if attempt:
+            time.sleep(5 * attempt)
+        headers = {"User-Agent": USER_AGENT}
+        if total:
+            headers["Range"] = f"bytes={total}-"
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            request = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(request, timeout=120) as response:
-                if response.status != 200:
+                if response.status == 200 and total:
+                    sha = hashlib.sha256()
+                    digest = hashlib.md5()
+                    total = 0
+                elif response.status not in (200, 206):
                     return f"download returned HTTP {response.status}"
-                sha = hashlib.sha256()
-                digest = hashlib.md5()
-                total = 0
                 while True:
                     chunk = response.read(8 * 1024 * 1024)
                     if not chunk:
@@ -110,21 +120,24 @@ def verify_download(url, size, sha256, md5, attempts=3):
                         return f"download is bigger than size {size}"
                     sha.update(chunk)
                     digest.update(chunk)
-            if total != size:
-                return f"download size is {total}, JSON size is {size}"
-            if sha.hexdigest() != sha256:
-                return "download SHA-256 is not the same as `id`"
-            if digest.hexdigest() != md5:
-                return "download MD5 is not the same as `md5`"
-            return None
         except urllib.error.HTTPError as exc:
             if exc.code == 404:
                 return "download returned HTTP 404 (file is not on the OTA server)"
             last = f"download returned HTTP {exc.code}"
+            continue
         except Exception as exc:
-            last = f"download failed: {clean(exc)}"
-        time.sleep(5 * (attempt + 1))
-    return last
+            last = f"download failed at {total} of {size} bytes: {clean(exc)}"
+            continue
+        if total == size:
+            break
+        last = f"download stopped at {total} of {size} bytes"
+    if total != size:
+        return last
+    if sha.hexdigest() != sha256:
+        return "download SHA-256 is not the same as `id`"
+    if digest.hexdigest() != md5:
+        return "download MD5 is not the same as `md5`"
+    return None
 
 
 def check_entry_types(report, path, entry):
@@ -271,15 +284,40 @@ def check_changelog(report, path, text):
         report.checked.append(f"`{path}`: changelog")
 
 
+def check_site_device(report, path, codename, text, released):
+    if codename not in released:
+        report.error(path, f"a release PR can change `site/devices/{codename}.json` only when it also releases `{codename}`")
+        return
+    if len(text.encode("utf-8")) > MAX_TEXT:
+        report.error(path, "file is too big for a website device page")
+        return
+    try:
+        data = json.loads(text)
+    except ValueError as exc:
+        report.error(path, f"not valid JSON: {clean(exc)}")
+        return
+    if not isinstance(data, dict):
+        report.error(path, "the top level must be an object")
+        return
+    old = site_device(codename)
+    if old is not None and old.get("maintainer") != data.get("maintainer"):
+        report.warn(path, "changes the maintainer; an admin must check it")
+    report.warn(path, "changes the website device page; an admin must review it")
+    report.checked.append(f"`{path}`: website device page")
+
+
 def check_files(report, files, author, association, download=True):
     codenames = set()
+    released = set()
+    sites = []
     device_files = 0
     for item in files:
         path, status, text = item["path"], item["status"], item.get("text")
         device = DEVICE_PATH.match(path)
         changelog = CHANGELOG_PATH.match(path)
-        if not device and not changelog:
-            report.error(path, "a release PR can only change `devices/<gms|vanilla>/<codename>.json` and `changelogs/changelog_<codename>.txt`")
+        site = SITE_PATH.match(path)
+        if not device and not changelog and not site:
+            report.error(path, "a release PR can only change `devices/<gms|vanilla>/<codename>.json`, `changelogs/changelog_<codename>.txt` and `site/devices/<codename>.json`")
             continue
         if status not in ("added", "modified"):
             report.error(path, f"file is {clean(status, 20)}; a release PR can only add or change files")
@@ -287,10 +325,14 @@ def check_files(report, files, author, association, download=True):
         if text is None:
             report.error(path, "cannot read the file from the PR")
             continue
-        if device:
+        if site:
+            codenames.add(site[1])
+            sites.append((path, site[1], text))
+        elif device:
             device_files += 1
             codename = device[2]
             codenames.add(codename)
+            released.add(codename)
             check_device_json(report, path, device[1], codename, text, download)
         else:
             codename = changelog[1].lower()
@@ -298,6 +340,8 @@ def check_files(report, files, author, association, download=True):
             if site_device(codename) is None and read_local(path) is None:
                 report.warn(path, f"no `site/devices/{codename}.json` for this changelog")
             check_changelog(report, path, text)
+    for path, codename, text in sites:
+        check_site_device(report, path, codename, text, released)
     if device_files == 0 and files:
         report.warn("", "this PR has no OTA JSON, so it releases nothing")
     if not files:
@@ -463,7 +507,7 @@ def main():
     for item in gh.pr_files(pr["number"]):
         path = item["filename"]
         text = None
-        if item["status"] in ("added", "modified") and (DEVICE_PATH.match(path) or CHANGELOG_PATH.match(path)):
+        if item["status"] in ("added", "modified") and (DEVICE_PATH.match(path) or CHANGELOG_PATH.match(path) or SITE_PATH.match(path)):
             text = gh.file_text(head_repo, path, head_sha)
         files.append({"path": path, "status": item["status"], "text": text})
 
