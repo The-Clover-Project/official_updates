@@ -1,0 +1,8 @@
+Highlights & Device Specific Changes:
+Build type: Stable
+Device: 
+Device maintainer: 
+
+===== DD Month YYYY =====
+
+* 
