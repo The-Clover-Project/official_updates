@@ -13,8 +13,8 @@
         "description": "Ensure your device's bootloader is unlocked before proceeding."
       },
       {
-        "title": "Reboot To Fastboot",
-        "description": "Reboot to Fastboot by pressing Vol Down + Power Button."
+        "title": "Reboot To Bootloader",
+        "description": "Reboot to Bootloader/Fastboot by pressing Vol Down + Power Button."
       },
       {
         "title": "Connection",
@@ -25,8 +25,8 @@
         "description": "Reboot to FastbootD by typing:<pre><code>fastboot reboot fastboot</code></pre>"
       },
       {
-        "title": "Flash Recovery",
-        "description": "Flash recovery (Use 6.1 recovery by @Superuser1958 if coming from stock) by typing:<pre><code>fastboot flash recovery recovery*.img</code></pre>"
+        "title": "Install Core System Files",
+        "description": "Flash core partitions by typing:<pre><code>fastboot flash boot boot.img\nfastboot flash dtbo dtbo.img\nfastboot flash vendor_boot vendor_boot.img\nfastboot flash init_boot init_boot.img\nfastboot flash recovery recovery.img</code></pre>"
       },
       {
         "title": "Reboot To Bootloader",
@@ -49,16 +49,16 @@
         "description": "Reboot into Recovery by typing:<pre><code>fastboot reboot recovery</code></pre>"
       },
       {
-        "title": "Wipe Data",
-        "description": "In recovery, click on factory reset and then do format data."
+        "title": "Flash Clover ROM",
+        "description": "In recovery, navigate to <b>Apply Update → Apply from ADB</b>, then sideload the ROM by typing:<pre><code>adb sideload CloverProject*.zip</code></pre>If prompted to install additional packages, choose <b>No</b>."
       },
       {
-        "title": "Flash Clover ROM",
-        "description": "Select apply update using sideload & install the ROM by typing:<pre><code>adb sideload CloverProject*.zip</code></pre>"
+        "title": "Wipe Data",
+        "description": "From the main recovery menu, select <b>Factory Reset → Format data/factory reset</b>. (Skip this step if you are dirty updating from an earlier build of this ROM)."
       },
       {
         "title": "Reboot",
-        "description": "The first boot may take a few minutes. Enjoy Clover!"
+        "description": "Select <b>Reboot system now</b>. The first boot may take a few minutes. Enjoy Clover!"
       }
     ],
     "warning": "Incorrect installation may brick your device. We are not responsible for any damage to your device. Proceed at your own risk."
