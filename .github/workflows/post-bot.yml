@@ -2,14 +2,21 @@ name: Rom Poster Bot
 
 on:
   push:
+    branches:
+      - "17"
     paths:
-      - "devices/*.json"
+      - "devices/gms/*.json"
+      - "devices/vanilla/*.json"
   workflow_dispatch:
+
+concurrency:
+  group: post-bot
+  cancel-in-progress: false
 
 env:
   GitHubMail: "persesx3@gmail.com"
   GitHubName: "CloverProject-bot"
-  GitHubToken: ${{ secrets.GH_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
   BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
   CHAT_IDS: ${{ secrets.CHAT_IDS }}
   PRIV_CHAT_ID: ${{ secrets.PRIV_CHAT_ID }}
@@ -19,32 +26,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
       - name: Install Dependencies
-        run: |
-          sudo apt remove python3-yaml
-          sudo pip install romkit noobstuffs
+        run: pip install romkit==1.0.2 noobstuffs
 
-      - name: Set Git Configs & Secrets
-        run: |
-          git config --global user.email ${GitHubMail}
-          git config --global user.name ${GitHubName}
-          git config --global color.ui true
-          git config --global credential.helper store
-          echo "https://${GitHubName}:${GitHubToken}@github.com" > ~/.git-credentials
+      - name: Build Post Feed
+        run: python .github/scripts/build_post_feed.py
 
       - name: Run RomPosterBot
-        run: sudo -E python3 .github/scripts/post.py
+        run: python .github/scripts/post.py
 
       - name: Commit and Push Changes
-        run: | 
-          git fetch && git pull
-          if [[ -z $(git status --porcelain) ]]; then
+        run: |
+          if [[ ! -f commit_mesg.txt ]]; then
             echo "No updates detected. Skipping commit."
             exit 0
           fi
-          COMMIT_MESSAGE=$(cat commit_mesg.txt)
-          rm commit_mesg.txt
-          git add . && git commit -sm "$COMMIT_MESSAGE"
-          git push origin 16
+          git config user.email "${GitHubMail}"
+          git config user.name "${GitHubName}"
+          git add .github/scripts/file_ids.txt
+          git commit -s -F commit_mesg.txt
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
