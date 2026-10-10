@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Ritesh",
+    "role": "Founder & Lead Developer",
+    "image": "https://avatars.githubusercontent.com/u/108788599?v=4",
+    "github": "https://github.com/RiteshSahany",
+    "telegram": "https://t.me/RiteshSahany"
+  },
+  {
+    "id": 2,
+    "name": "Perses",
+    "role": "Core Team & Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/113546203?v=4",
+    "github": "https://github.com/bntxperses",
+    "telegram": "https://t.me/bntxperses"
+  },
+  {
+    "id": 3,
+    "name": "Devansh P.",
+    "role": "Roster Manager",
+    "image": "https://avatars.githubusercontent.com/u/170931189?v=4",
+    "github": "https://github.com/NotBlazeee28",
+    "telegram": "https://t.me/NotBlazeee28"
+  },
+  {
+    "id": 4,
+    "name": "Akshat",
+    "role": "Public Relations",
+    "image": "https://avatars.githubusercontent.com/u/91002031?v=4",
+    "github": "https://github.com/Legendleo90",
+    "telegram": "https://t.me/Legendleo90"
+  },
+  {
+    "id": 5,
+    "name": "Cruecy",
+    "role": "Infra Dev",
+    "image": "https://avatars.githubusercontent.com/u/68052029?v=4",
+    "github": "https://github.com/userariii",
+    "telegram": "https://t.me/CRUECY"
+  },
+  {
+    "id": 6,
+    "name": "Kshitij :)",
+    "role": "UI/UX",
+    "image": "https://avatars.githubusercontent.com/u/156404280?v=4",
+    "github": "https://github.com/kshitij-bhale",
+    "telegram": "https://t.me/Stock_Sucks"
+  },
+  {
+    "id": 7,
+    "name": "Sreejith",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/116376583?v=4",
+    "github": "https://github.com/sreejith7676",
+    "telegram": "https://t.me/sreejith0491"
+  },
+  {
+    "id": 8,
+    "name": "Rayyan",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/126084656?v=4",
+    "github": "https://github.com/Rayyan-x95",
+    "telegram": "https://t.me/rayyan_x95"
+  },
+  {
+    "id": 9,
+    "name": "Farrukh",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/59789349?v=4",
+    "github": "https://github.com/farrukh2002",
+    "telegram": "https://t.me/Farrukh2002"
+  },
+  {
+    "id": 10,
+    "name": "Provasish",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/82043200?v=4",
+    "github": "https://github.com/provasish",
+    "telegram": "https://t.me/provasishh"
+  },
+  {
+    "id": 11,
+    "name": "sloppe",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/82859267?v=4",
+    "github": "https://github.com/GhostedProtocol16",
+    "telegram": "https://t.me/aisloppe"
+  },
+  {
+    "id": 12,
+    "name": "Olzhas0986",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/89378221?v=4",
+    "github": "https://github.com/Olzhas-Kdyr",
+    "telegram": "https://t.me/olzhas0986kz"
+  },
+  {
+    "id": 13,
+    "name": "Kaveer",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/86919827?v=4",
+    "github": "https://github.com/Kaveer2009",
+    "telegram": "https://t.me/kaveerrana"
+  },
+  {
+    "id": 14,
+    "name": "NayanYC",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/213038701?v=4",
+    "github": "https://github.com/NayanChavare",
+    "telegram": "https://t.me/nayanyc23"
+  },
+  {
+    "id": 15,
+    "name": "RAM-UNLOK",
+    "role": "Maintainer",
+    "image": "https://avatars.githubusercontent.com/u/88646966?v=4",
+    "github": "https://github.com/RAM-UNLOK",
+    "telegram": "https://t.me/RAM_UNLOK"
+  }
+]
