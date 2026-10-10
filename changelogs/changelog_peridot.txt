@@ -3,6 +3,11 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+===== 10 October 2026 =====
+
+* Initial A17 QPR0 release.
+* Needs a full clean flash.
+
 === 14 September 2026 ===
 
 * Introduce standalone Ulquiorra Manager app for better user experience.
