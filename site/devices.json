@@ -1,5 +1,24 @@
 [
   {
+    "codename": "asteroids",
+    "name": "Nothing Phone 3a/Pro",
+    "brand": "Nothing",
+    "maintainer": {
+      "name": "NayanYC",
+      "githubUrl": "https://github.com/NayanChavare"
+    },
+    "image": "images/devices/asteroids.png",
+    "heroImage": "images/devices/download/asteroids.png",
+    "released": true,
+    "version": "4.0",
+    "datetime": 1791642272,
+    "variants": [
+      "gms",
+      "vanilla"
+    ],
+    "changelog": "changelog_asteroids.txt"
+  },
+  {
     "codename": "peridot",
     "name": "POCO F6 / Redmi Turbo 3",
     "brand": "Poco & Redmi",
@@ -97,22 +116,6 @@
     "datetime": null,
     "variants": [],
     "changelog": "changelog_Spacewar.txt"
-  },
-  {
-    "codename": "asteroids",
-    "name": "Nothing Phone 3a/Pro",
-    "brand": "Nothing",
-    "maintainer": {
-      "name": "NayanYC",
-      "githubUrl": "https://github.com/NayanChavare"
-    },
-    "image": "images/devices/asteroids.png",
-    "heroImage": "images/devices/download/asteroids.png",
-    "released": false,
-    "version": null,
-    "datetime": null,
-    "variants": [],
-    "changelog": "changelog_asteroids.txt"
   },
   {
     "codename": "beryllium",
