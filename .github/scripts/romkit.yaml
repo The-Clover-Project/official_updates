@@ -27,7 +27,7 @@ device_json_structure: {
 id_field: "id"
 
 message_template: |
-  #CloverProject #{bot_codename} #bka
+  #CloverProject #{bot_codename} #CinnamonBun
   The Clover Project v{version} | OFFICIAL
   📲 : {devicename} ({bot_codename})
   📅 : {datetime | dateformat("%d-%b-%Y")}
