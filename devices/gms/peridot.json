@@ -1,0 +1,16 @@
+{
+  "response": [
+    {
+      "datetime": 1791650879,
+      "filename": "CloverProject-4.0-20261010-OFFICIAL-peridot-GMS.zip",
+      "id": "12b99c5f880d5863ceeda784874192f4266af23a2b633225e1b742961b1ded78",
+      "md5": "996ae4129aa039ad308c85844c7bc0da",
+      "size": 3777677544,
+      "url": "https://ota.thecloverproject.com/peridot/4.0/CloverProject-4.0-20261010-OFFICIAL-peridot-GMS.zip",
+      "version": "4.0",
+      "romtype": "official",
+      "devicename": "POCO F6 / Redmi Turbo 3",
+      "maintainer": "Farrukh2002"
+    }
+  ]
+}

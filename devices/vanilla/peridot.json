@@ -1,0 +1,16 @@
+{
+  "response": [
+    {
+      "datetime": 1791647941,
+      "filename": "CloverProject-4.0-20261010-OFFICIAL-peridot-VANILLA.zip",
+      "id": "710e2eb1721c8a2e9c51d8c9cf3442ddd02262b648d6cf3fc816508749c468b2",
+      "md5": "2829901391fa4434338e15881ccb675c",
+      "size": 2600401168,
+      "url": "https://ota.thecloverproject.com/peridot/4.0/CloverProject-4.0-20261010-OFFICIAL-peridot-VANILLA.zip",
+      "version": "4.0",
+      "romtype": "official",
+      "devicename": "POCO F6 / Redmi Turbo 3",
+      "maintainer": "Farrukh2002"
+    }
+  ]
+}
