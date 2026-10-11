@@ -2,6 +2,8 @@
   "ver_clean_required": [
     "4.0"
   ],
-  "ver_dirty_allowed": [],
+  "ver_dirty_allowed": [
+    "4.0-HOTFIX"
+  ],
   "devices": {}
 }
