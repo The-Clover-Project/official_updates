@@ -3,6 +3,13 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+===== 11 October 2026 =====
+
+* Hotfix build the adress the issues below.
+* Fix MiUi Camera and move to Leica Cam (credits @phoenix ).
+* Change from stock dolby to custom dolby implementation from AOSPA (credits @userarii ).
+* Add back ulquiorra tile.
+
 ===== 10 October 2026 =====
 
 * Initial A17 QPR0 release.
