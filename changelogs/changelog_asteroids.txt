@@ -3,12 +3,17 @@ Build type: Stable
 Device: Nothing Phone 3a/Pro
 Device maintainer: NayanYC
 
+=== 12/10/26 ===
+
+* Applied Fixes for audio and display
+* Added Assist key to customize essential key
+
 === 10/10/26 ===
 
 * October Security Patch
 * Upstream kernel (6.6.114 -> 6.6.144) 
 * Switch to Qualcomm Perf2 PowerHALs
-* Disabled CLO specific features not applicable to PixelOS
+* Disabled CLO specific features not applicable to AOSP
 * Allowed SurfaceFlinger to use the big cluster
 * Improved overall smoothness & system stability
 * Fixed green tint issue when using fingerprint on adaptive refresh rate
