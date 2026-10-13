@@ -1,5 +1,24 @@
 [
   {
+    "codename": "alioth",
+    "name": "Mi 11x / Poco F3",
+    "brand": "Mi & Poco",
+    "maintainer": {
+      "name": "Perses",
+      "githubUrl": "https://github.com/bntxperses"
+    },
+    "image": "images/devices/alioth.png",
+    "heroImage": "images/devices/download/alioth.png",
+    "released": true,
+    "version": "4.0",
+    "datetime": 1791871598,
+    "variants": [
+      "gms",
+      "vanilla"
+    ],
+    "changelog": "changelog_alioth.txt"
+  },
+  {
     "codename": "asteroids",
     "name": "Nothing Phone 3a/Pro",
     "brand": "Nothing",
@@ -36,22 +55,6 @@
       "vanilla"
     ],
     "changelog": "changelog_peridot.txt"
-  },
-  {
-    "codename": "alioth",
-    "name": "Mi 11x / Poco F3",
-    "brand": "Mi & Poco",
-    "maintainer": {
-      "name": "Perses",
-      "githubUrl": "https://github.com/bntxperses"
-    },
-    "image": "images/devices/alioth.png",
-    "heroImage": "images/devices/download/alioth.png",
-    "released": false,
-    "version": null,
-    "datetime": null,
-    "variants": [],
-    "changelog": "changelog_alioth.txt"
   },
   {
     "codename": "cancunf",
