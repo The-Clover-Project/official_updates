@@ -3,6 +3,15 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 13 October 2026 =====
+
+* Initial A17 QPR0 release
+* Rebase on latest LOS changes
+* Modernize ZRAM initialization
+* Drop Lineage health service
+* Clean up product package definitions
+* Drop unused rootdir configurations
+
 ===== 12 Jun 2026 =====
 
 * sm8250-common: dont stop statsd anymore
