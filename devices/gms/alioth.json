@@ -1,0 +1,16 @@
+{
+  "response": [
+    {
+      "datetime": 1791871598,
+      "filename": "CloverProject-4.0-20261013-OFFICIAL-alioth-GMS.zip",
+      "id": "52645e08da455cc94a16067f047c3c8e100c7b9c7b577ddf886b517ab424516c",
+      "md5": "7d5918b59e9a33df6e447494ea83e3c2",
+      "size": 2891276658,
+      "url": "https://ota.thecloverproject.com/alioth/4.0/CloverProject-4.0-20261013-OFFICIAL-alioth-GMS.zip",
+      "version": "4.0",
+      "romtype": "official",
+      "devicename": "Poco F3/ Mi 11x",
+      "maintainer": "Perses"
+    }
+  ]
+}

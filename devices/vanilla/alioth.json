@@ -1,0 +1,16 @@
+{
+  "response": [
+    {
+      "datetime": 1791874931,
+      "filename": "CloverProject-4.0-20261013-OFFICIAL-alioth-VANILLA.zip",
+      "id": "0b15b8f9fdd7be735522692c1636692710273ceb493cef5b7e3a25e6d10de79e",
+      "md5": "db66c258ed0eb65b256aac9aca7245ee",
+      "size": 1793291933,
+      "url": "https://ota.thecloverproject.com/alioth/4.0/CloverProject-4.0-20261013-OFFICIAL-alioth-VANILLA.zip",>
+      "version": "4.0",
+      "romtype": "official",
+      "devicename": "Poco F3/ Mi 11x",
+      "maintainer": "Perses"
+    }
+  ]
+}
