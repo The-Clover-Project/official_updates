@@ -57,6 +57,25 @@
     "changelog": "changelog_peridot.txt"
   },
   {
+    "codename": "onyx",
+    "name": "POCO F7",
+    "brand": "POCO",
+    "maintainer": {
+      "name": "Kaveer",
+      "githubUrl": "https://github.com/Kaveer2009"
+    },
+    "image": "images/devices/onyx.png",
+    "heroImage": "images/devices/download/onyx.png",
+    "released": true,
+    "version": "4.0",
+    "datetime": 1792053717,
+    "variants": [
+      "gms",
+      "vanilla"
+    ],
+    "changelog": "changelog_onyx.txt"
+  },
+  {
     "codename": "cancunf",
     "name": "Motorola G54/G64",
     "brand": "Motorola",
@@ -151,22 +170,6 @@
     "datetime": null,
     "variants": [],
     "changelog": "changelog_munch.txt"
-  },
-  {
-    "codename": "onyx",
-    "name": "POCO F7",
-    "brand": "POCO",
-    "maintainer": {
-      "name": "Kaveer",
-      "githubUrl": "https://github.com/Kaveer2009"
-    },
-    "image": "images/devices/onyx.png",
-    "heroImage": "images/devices/download/onyx.png",
-    "released": false,
-    "version": null,
-    "datetime": null,
-    "variants": [],
-    "changelog": "changelog_onyx.txt"
   },
   {
     "codename": "miatoll",
