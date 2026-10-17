@@ -3,6 +3,53 @@ Build type: Stable
 Device: POCO F7
 Device maintainer: Kaveer
 
+===== 17 October 2026 =====
+
+* Improved Wi-Fi battery backup by reducing unnecessary background activity
+* Removed an unused memory management module
+* Fixed Wi-Fi driver build issues
+* Improved RAM management for the 12GB RAM variant
+* Improved support for handling media files
+* Fixed Bluetooth internet sharing configuration
+* Updated default network mode settings
+* Removed unused system components
+* Fixed default Wi-Fi country settings
+* Improved app pinning for faster app launches
+* Optimized app loading by keeping important system files ready in memory
+* Added CameraX extensions support for better camera app compatibility
+* Enabled Fastbootd by default
+* Fixed multiple SELinux permission issues affecting system services
+* Disabled MMAP audio playback to improve audio compatibility
+* Removed obsolete NFC services to prevent boot errors
+* Improved system performance and memory management
+* Optimized app launch and UI rendering performance
+* Restored Dolby audio support 🎧
+* Improved CPU performance during heavy rendering and animations
+* Fixed VoIP audio playback configuration
+* Improved vibration effect mapping
+* Updated the device's lighting service
+* Improved Wi-Fi roaming and connection stability
+* Made Wi-Fi smarter when choosing between 2.4GHz and 5GHz networks
+* Reduced unnecessary Wi-Fi firmware logging
+* Improved Bluetooth device connectivity
+* Optimized CPU frequency settings for better power efficiency
+* Increased media volume steps from 15 to 25 for finer volume control
+* Reduced memory usage when switching between recent apps
+* Disabled unused debugging features to reduce overhead
+* Enabled double-tap and single-tap sensor support
+* Improved fingerprint sensor handling when cancelling authentication
+* Updated display cutout and corner configurations
+* Reduced UI stutters when viewing Ultra HDR content
+* Improved battery efficiency by reducing unnecessary background activity
+* Improved audio playback efficiency and reduced CPU wakeups
+* Fixed camera access and permission issues
+* Fixed filesystem encryption permission issues
+* Improved system boot configuration and removed unnecessary services
+* Added the option to restart SystemUI from Advanced Reboot
+* Improved Bluetooth auto-connect behavior
+* Removed unnecessary test apps and unused background services
+* Improved system compatibility with Android's latest changes
+
 ===== 28 August 2026 =====
 
 * Significant overall performance, smoothness and responsiveness improvements
