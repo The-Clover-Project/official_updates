@@ -76,6 +76,25 @@
     "changelog": "changelog_onyx.txt"
   },
   {
+    "codename": "rodin",
+    "name": "POCO X7 Pro / Redmi Turbo 4",
+    "brand": "POCO & Redmi",
+    "maintainer": {
+      "name": "RAM-UNLOK",
+      "githubUrl": "https://github.com/RAM-UNLOK"
+    },
+    "image": "images/devices/rodin.png",
+    "heroImage": "images/devices/download/rodin.png",
+    "released": true,
+    "version": "4.0",
+    "datetime": 1792344029,
+    "variants": [
+      "gms",
+      "vanilla"
+    ],
+    "changelog": "changelog_rodin.txt"
+  },
+  {
     "codename": "cancunf",
     "name": "Motorola G54/G64",
     "brand": "Motorola",
@@ -202,22 +221,6 @@
     "datetime": null,
     "variants": [],
     "changelog": "changelog_vayu.txt"
-  },
-  {
-    "codename": "rodin",
-    "name": "POCO X7 Pro / Redmi Turbo 4",
-    "brand": "POCO & Redmi",
-    "maintainer": {
-      "name": "RAM-UNLOK",
-      "githubUrl": "https://github.com/RAM-UNLOK"
-    },
-    "image": "images/devices/rodin.png",
-    "heroImage": "images/devices/download/rodin.png",
-    "released": false,
-    "version": null,
-    "datetime": null,
-    "variants": [],
-    "changelog": "changelog_rodin.txt"
   },
   {
     "codename": "spartan",
