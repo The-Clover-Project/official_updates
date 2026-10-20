@@ -20,7 +20,7 @@ PUBLIC_BASE_URL = "https://ota.thecloverproject.com"
 AUTH_URL = "https://api.backblazeb2.com/b2api/v3/b2_authorize_account"
 DEFAULT_ENV_FILE = "~/.config/clover/b2.env"
 FILENAME_PATTERN = re.compile(
-    r"^CloverProject-(?P<version>[^-]+(?:-HOTFIX\d*)?)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$",
+    r"^CloverProject-(?P<version>[^-]+)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$",
     re.IGNORECASE,
 )
 RETRY_STATUSES = {401, 408, 429, 500, 503}
@@ -226,7 +226,7 @@ class B2:
 def parse_zip_name(path):
     match = FILENAME_PATTERN.match(Path(path).name)
     if not match:
-        sys.exit(f"{Path(path).name}: name must look like CloverProject-<version>[-HOTFIX[n]]-<yyyymmdd[_hhmmss]>-OFFICIAL-<codename>-<GMS|VANILLA>.zip")
+        sys.exit(f"{Path(path).name}: name must look like CloverProject-<version>-<yyyymmdd[_hhmmss]>-OFFICIAL-<codename>-<GMS|VANILLA>.zip")
     return match.groupdict()
 
 
@@ -347,7 +347,7 @@ def main():
         ),
     )
     parser.add_argument("zips", nargs="+", help="OTA zip files (GMS and/or Vanilla)")
-    parser.add_argument("--version", help="version for the folder and the JSON; it must be the same as the version in the zip name, for example 4.0-HOTFIX")
+    parser.add_argument("--version", help="version for the folder and the JSON; it must be the same as the version in the zip name, for example 4.0")
     parser.add_argument("--devicename", help="device name for the JSON (default: site/devices/<codename>.json)")
     parser.add_argument("--maintainer", help="maintainer for the JSON (default: current JSON or site/devices/<codename>.json)")
     parser.add_argument("--repo", default=Path(__file__).resolve().parents[1], type=Path, help="official_updates checkout (default: this repo)")

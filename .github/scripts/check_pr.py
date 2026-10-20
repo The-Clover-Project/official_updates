@@ -31,10 +31,10 @@ SITE_PATH = re.compile(r"^site/devices/([a-z0-9][a-z0-9_.-]*)\.json$")
 COMPAT_PATH = "ota/compatibility.json"
 COMPAT_KEYS = ["ver_clean_required", "ver_dirty_allowed", "devices"]
 CODENAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
-VERSION = re.compile(r"^(\d+)(?:\.(\d+))?(?:-HOTFIX(\d*))?$")
-VERSION_HELP = "a version must look like `4.0`, `4.6-HOTFIX` or `4.6-HOTFIX2`"
+VERSION = re.compile(r"^(\d+)(?:\.(\d+))?$")
+VERSION_HELP = "a version must look like `4.0` or `4.6`"
 FILENAME = re.compile(
-    r"^CloverProject-(?P<version>[^-]+(?:-HOTFIX\d*)?)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$"
+    r"^CloverProject-(?P<version>[^-]+)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$"
 )
 HEX64 = re.compile(r"^[0-9a-f]{64}$")
 HEX32 = re.compile(r"^[0-9a-f]{32}$")
@@ -75,8 +75,7 @@ def version_key(text):
     match = VERSION.match(text) if isinstance(text, str) else None
     if not match:
         return None
-    hotfix = match[3]
-    return (int(match[1]), int(match[2] or 0), 0 if hotfix is None else int(hotfix or 1))
+    return (int(match[1]), int(match[2] or 0))
 
 
 def version_set(value):
@@ -273,7 +272,7 @@ def check_device_json(report, path, variant, codename, text, download=True):
 
     name = FILENAME.match(entry["filename"])
     if not name:
-        report.error(path, "`filename` must look like `CloverProject-<version>[-HOTFIX[n]]-<yyyymmdd[_hhmmss]>-OFFICIAL-<codename>-<GMS|VANILLA>.zip`")
+        report.error(path, "`filename` must look like `CloverProject-<version>-<yyyymmdd[_hhmmss]>-OFFICIAL-<codename>-<GMS|VANILLA>.zip`")
         return None
     if name["codename"].lower() != codename.lower():
         report.error(path, f"`filename` is for `{clean(name['codename'])}`, but the file is `{codename}.json`")

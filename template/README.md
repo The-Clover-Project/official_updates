@@ -17,7 +17,7 @@ One pull request can release GMS, Vanilla, or both.
 | `md5` | MD5 of the zip |
 | `size` | Zip size in bytes |
 | `url` | `https://ota.thecloverproject.com/<codename in lower case>/<version>/<filename>` |
-| `version` | The version in `filename`, for example `4.0`, `4.0-HOTFIX` or `4.0-HOTFIX2` |
+| `version` | The version in `filename`, for example `4.0` |
 | `romtype` | `official` |
 | `devicename` | `name` in `site/devices/<codename in lower case>.json` |
 | `maintainer` | `maintainer.name` in `site/devices/<codename in lower case>.json` |
@@ -37,7 +37,7 @@ If your release needs a clean flash on your device only, add its version to
 ```json
 "devices": {
   "peridot": {
-    "ver_clean_required": ["4.0-HOTFIX"]
+    "ver_clean_required": ["4.1"]
   }
 }
 ```
