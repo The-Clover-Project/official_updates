@@ -3,8 +3,16 @@ Build type: Stable
 Device: Nothing Phone 3a/Pro
 Device maintainer: NayanYC
 
-=== 12/10/26 ===
+=== 22/10/26 ===
 
+* Added pocket mode.
+* Added auto glyph animation generate (bngc like).
+* Now the glyph will behave just like in nos. Glyph animation will auto generate and apply based on current ringtone. If using ringtone from glyphtones glyph animations will be auto applied.
+* Update firwmare/vendor from Asteroids-B4.1-260928-1204.
+* Improved overall stability.
+* Improved dolby (dolby settings is strictly in settings page now no separate app icon).
+* Improved flip to glyph.
+* Fix issue with USB randomly disconnecting.
 * Applied Fixes for audio and display
 * Added Assist key to customize essential key
 

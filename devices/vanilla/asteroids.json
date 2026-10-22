@@ -1,19 +1,19 @@
 {
   "response": [
     {
-      "datetime": 1791813934,
-      "filename": "CloverProject-4.0-HOTFIX-20261012-OFFICIAL-asteroids-VANILLA.zip",
-      "id": "bfd471fcd9de2b4cd2a54f1425c831f17a5f8fdf484334cc5d3ec53f76b6d044",
-      "md5": "23f10c781264b05d18f47e3d8776a966",
-      "size": 1694602722,
-      "url": "https://ota.thecloverproject.com/asteroids/4.0-HOTFIX/CloverProject-4.0-HOTFIX-20261012-OFFICIAL-asteroids-VANILLA.zip",
+      "datetime": 1792608911,
+      "filename": "CloverProject-4.0-20261021-OFFICIAL-asteroids-VANILLA.zip",
+      "id": "7d26c94fd6b1fb5922b887f8ee6da34202a176a548af66750040f34ca6e03cbb",
+      "md5": "7c9066852690c9bd50f4815936024ae2",
+      "size": 1684770343,
+      "url": "https://ota.thecloverproject.com/asteroids/4.0-HOTFIX/CloverProject-4.0-20261021-OFFICIAL-asteroids-VANILLA.zip",
       "version": "4.0-HOTFIX",
       "romtype": "official",
       "devicename": "Nothing Phone 3a/Pro",
       "maintainer": "NayanYC",
       "os_sdk_level": 37,
       "os_patch_level": "2026-10-05",
-      "ota_property_files": "payload_metadata.bin:4997:159404,payload.bin:4997:1694594291,payload_properties.txt:1694599346:156,apex_info.pb:2236:1481,care_map.pb:3764:1186,metadata:69:683,metadata.pb:820:1368"
+      "ota_property_files": "payload_metadata.bin:4997:159353,payload.bin:4997:1684761912,payload_properties.txt:1684766967:156,apex_info.pb:2236:1481,care_map.pb:3764:1186,metadata:69:683,metadata.pb:820:1368"
     }
   ]
 }
