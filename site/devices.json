@@ -48,8 +48,8 @@
     "image": "images/devices/peridot.png",
     "heroImage": "images/devices/download/peridot.png",
     "released": true,
-    "version": "4.0-HOTFIX",
-    "datetime": 1792471771,
+    "version": "4.1",
+    "datetime": 1794485001,
     "variants": [
       "gms",
       "vanilla"
