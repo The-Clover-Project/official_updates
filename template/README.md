@@ -17,7 +17,7 @@ One pull request can release GMS, Vanilla, or both.
 | `md5` | MD5 of the zip |
 | `size` | Zip size in bytes |
 | `url` | `https://ota.thecloverproject.com/<codename in lower case>/<version>/<filename>` |
-| `version` | The version in `filename`, for example `4.0` |
+| `version` | The version in `filename`, for example `4.0`. A hotfix adds `-HOTFIX` or `-HOTFIX2`, for example `4.0-HOTFIX`; `filename` keeps `4.0` |
 | `romtype` | `official` |
 | `devicename` | `name` in `site/devices/<codename in lower case>.json` |
 | `maintainer` | `maintainer.name` in `site/devices/<codename in lower case>.json` |

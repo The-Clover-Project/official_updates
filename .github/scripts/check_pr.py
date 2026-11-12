@@ -24,7 +24,10 @@ LABELS = {
 }
 TRUSTED = {"OWNER", "MEMBER", "COLLABORATOR"}
 KEYS = ["datetime", "filename", "id", "md5", "size", "url", "version", "romtype", "devicename", "maintainer"]
-OPTIONAL_KEYS = ["os_sdk_level", "os_patch_level", "ota_property_files"]
+OPTIONAL_KEYS = ["os_sdk_level", "os_patch_level", "ota_property_files", "ota_id", "incrementals"]
+STEP_KEYS = ["from", "to", "url", "size", "sha256"]
+MAX_STEPS = 6
+MAX_CHAIN_PERCENT = 70
 DEVICE_PATH = re.compile(r"^devices/(gms|vanilla)/([A-Za-z0-9][A-Za-z0-9_.-]*)\.json$")
 CHANGELOG_PATH = re.compile(r"^changelogs/changelog_([A-Za-z0-9][A-Za-z0-9_.-]*)\.txt$")
 SITE_PATH = re.compile(r"^site/devices/([a-z0-9][a-z0-9_.-]*)\.json$")
@@ -33,11 +36,14 @@ COMPAT_KEYS = ["ver_clean_required", "ver_dirty_allowed", "devices"]
 CODENAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
 VERSION = re.compile(r"^(\d+)(?:\.(\d+))?$")
 VERSION_HELP = "a version must look like `4.0` or `4.6`"
+RELEASE_VERSION = re.compile(r"^(\d+(?:\.\d+)?)(?:-HOTFIX\d*)?$")
+RELEASE_VERSION_HELP = "`version` must look like `4.0`, `4.0-HOTFIX` or `4.0-HOTFIX2`"
 FILENAME = re.compile(
     r"^CloverProject-(?P<version>[^-]+)-(?P<date>\d{8}(?:_\d{6})?)-(?P<romtype>[A-Za-z]+)-(?P<codename>.+)-(?P<variant>GMS|VANILLA)\.zip$"
 )
 HEX64 = re.compile(r"^[0-9a-f]{64}$")
 HEX32 = re.compile(r"^[0-9a-f]{32}$")
+OTA_ID = re.compile(r"^[0-9a-f]{16}$")
 PATCH_LEVEL = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PROPERTY_FILE = re.compile(r"^[A-Za-z0-9_.-]+:\d+:\d+$")
 MAX_TEXT = 64 * 1024
@@ -144,7 +150,7 @@ class Report:
         return not self.errors
 
 
-def verify_download(url, size, sha256, md5, attempts=5):
+def verify_download(url, size, sha256, md5=None, attempts=5):
     sha = hashlib.sha256()
     digest = hashlib.md5()
     total = 0
@@ -188,7 +194,7 @@ def verify_download(url, size, sha256, md5, attempts=5):
         return last
     if sha.hexdigest() != sha256:
         return "download SHA-256 is not the same as `id`"
-    if digest.hexdigest() != md5:
+    if md5 is not None and digest.hexdigest() != md5:
         return "download MD5 is not the same as `md5`"
     return None
 
@@ -244,7 +250,98 @@ def check_entry_types(report, path, entry):
             good = False
         elif not any(p.startswith("payload.bin:") for p in parts):
             report.warn(path, "`ota_property_files` has no `payload.bin`, so the app cannot stream this update")
+    if "ota_id" in entry and (not isinstance(entry["ota_id"], str) or not OTA_ID.match(entry["ota_id"])):
+        report.error(path, "`ota_id` must be the `ro.ota.id` of the build (16 lower case hex characters)")
+        good = False
+    if "incrementals" in entry and not check_step_types(report, path, entry):
+        good = False
     return good
+
+
+def check_step_types(report, path, entry):
+    steps = entry["incrementals"]
+    if "ota_id" not in entry:
+        report.error(path, "`incrementals` needs `ota_id`")
+        return False
+    if not isinstance(steps, list) or len(steps) > MAX_STEPS:
+        report.error(path, f"`incrementals` must be a list with at most {MAX_STEPS} items")
+        return False
+    good = True
+    for i, step in enumerate(steps):
+        where = f"`incrementals[{i}]`"
+        if not isinstance(step, dict) or list(step.keys()) != STEP_KEYS:
+            report.error(path, f"{where} must have exactly the keys " + ", ".join(f"`{k}`" for k in STEP_KEYS) + " in this order")
+            good = False
+            continue
+        if not all(isinstance(step[k], str) and OTA_ID.match(step[k]) for k in ("from", "to")):
+            report.error(path, f"{where}: `from` and `to` must be `ro.ota.id` values (16 lower case hex characters)")
+            good = False
+        if isinstance(step["size"], bool) or not isinstance(step["size"], int) or not 0 < step["size"] <= MAX_ROM:
+            report.error(path, f"{where}: `size` must be a positive whole number")
+            good = False
+        if not isinstance(step["sha256"], str) or not HEX64.match(step["sha256"]):
+            report.error(path, f"{where}: `sha256` must be 64 lower case hex characters")
+            good = False
+        if not isinstance(step["url"], str):
+            report.error(path, f"{where}: `url` must be a text value")
+            good = False
+    return good
+
+
+def check_steps(report, path, codename, entry, old, download):
+    steps = entry.get("incrementals", [])
+    if not steps:
+        return ""
+    good = True
+    for i, step in enumerate(steps):
+        url = urllib.parse.urlparse(step["url"])
+        parts = [urllib.parse.unquote(p) for p in url.path.split("/")]
+        if url.scheme != "https" or url.hostname != OTA_HOST or url.port is not None or url.query or url.fragment or url.username \
+                or len(parts) != 4 or parts[1].lower() != codename.lower() or parts[2] != "incremental" or not parts[3].endswith(".zip") \
+                or parts[3] in (".zip", "..zip"):
+            report.error(path, f"`incrementals[{i}]`: `url` must be `https://{OTA_HOST}/{codename.lower()}/incremental/<file>.zip`")
+            good = False
+        if step["from"] == step["to"]:
+            report.error(path, f"`incrementals[{i}]`: `from` and `to` are the same")
+            good = False
+        if i and steps[i - 1]["to"] != step["from"]:
+            report.error(path, f"`incrementals[{i}]`: `from` is not the `to` of the step before it")
+            good = False
+    if steps[-1]["to"] != entry["ota_id"]:
+        report.error(path, "the last item in `incrementals` must go `to` the `ota_id` of this build")
+        good = False
+    if len({s["from"] for s in steps}) != len(steps):
+        report.error(path, "`incrementals` has two steps from the same build")
+        good = False
+    if sum(s["size"] for s in steps) * 100 >= entry["size"] * MAX_CHAIN_PERCENT:
+        report.warn(path, f"the steps in `incrementals` are {MAX_CHAIN_PERCENT}% or more of the full zip; the app uses the full zip")
+
+    old_id = old.get("ota_id")
+    old_steps = old.get("incrementals") if isinstance(old.get("incrementals"), list) else []
+    new_steps = steps
+    if old_id:
+        if old_id == entry["ota_id"]:
+            report.error(path, "`ota_id` is the same as the current release")
+            good = False
+        tail = steps[-1]
+        if tail["from"] != old_id:
+            report.error(path, "the last item in `incrementals` must go `from` the `ota_id` of the current release")
+            good = False
+        kept = steps[:-1]
+        if kept and kept != old_steps[len(old_steps) - len(kept):]:
+            report.error(path, "the items before the last one in `incrementals` must be the newest items of the current release, with no changes")
+            good = False
+        new_steps = [tail]
+    else:
+        report.warn(path, "the current release has no `ota_id`, so the steps in `incrementals` cannot be compared with it")
+    if not good or not download:
+        return ""
+    for step in new_steps:
+        problem = verify_download(step["url"], step["size"], step["sha256"])
+        if problem:
+            report.error(path, f"incremental `{clean(step['url'])}`: {problem}")
+            return ", incremental download failed"
+    return f", {len(steps)} incremental step(s), new step download OK"
 
 
 def check_device_json(report, path, variant, codename, text, download=True):
@@ -284,9 +381,10 @@ def check_device_json(report, path, variant, codename, text, download=True):
         report.error(path, f"`romtype` is `{clean(entry['romtype'])}`, but `filename` has `{clean(name['romtype'])}`")
     if entry["romtype"] != entry["romtype"].lower():
         report.warn(path, "`romtype` is usually lower case")
-    if version_key(entry["version"]) is None:
-        report.error(path, f"`version` is `{clean(entry['version'])}`; {VERSION_HELP}")
-    elif entry["version"] != name["version"]:
+    release = RELEASE_VERSION.match(entry["version"])
+    if not release:
+        report.error(path, f"`version` is `{clean(entry['version'])}`; {RELEASE_VERSION_HELP}")
+    elif release[1] != name["version"]:
         report.error(path, f"`version` is `{clean(entry['version'])}`, but `filename` has `{clean(name['version'])}`")
 
     if not HEX64.match(entry["id"]):
@@ -319,10 +417,13 @@ def check_device_json(report, path, variant, codename, text, download=True):
         report.error(path, "the date in `filename` is not a real date")
 
     base = read_local(path)
+    old = {}
     if base is not None:
         try:
             old = (json.loads(base).get("response") or [None])[0] or {}
         except (ValueError, AttributeError):
+            old = {}
+        if not isinstance(old, dict):
             old = {}
         if old.get("id") == entry["id"] or old.get("filename") == entry["filename"]:
             report.error(path, "this build is already released")
@@ -341,6 +442,7 @@ def check_device_json(report, path, variant, codename, text, download=True):
             report.warn(path, f"`maintainer` is not the same as the site maintainer `{clean(site_maintainer)}`")
 
     result = f"{clean(entry['version'])} {name['variant']}, {human_size(entry['size'])}"
+    result += check_steps(report, path, codename, entry, old, download)
     if download and url_ok and HEX64.match(entry["id"]) and HEX32.match(entry["md5"]) and entry["size"] <= MAX_ROM:
         problem = verify_download(entry["url"], entry["size"], entry["id"], entry["md5"])
         if problem:
