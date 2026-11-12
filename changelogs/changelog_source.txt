@@ -1,6 +1,25 @@
 Highlights & Source Specific Changes:
 Status: Stable
 
+===== 12 November 2026 =====
+
+* Android 17 November Update (v4.1) with November security patch.
+* Introducing Sprout home for Clover features and customization
+* Added Map at a Glance for Google Maps navigation on Always-on Display
+* Added Link Sanitizer to remove tracking parameters from copied links
+* Redesigned Play Integrity and TrickyStore settings with improved profile and keybox management
+* Added on-device keybox generation for supported devices
+* Google Photos spoofing now applies automatically without a separate toggle
+* Improved Updater with parallel downloads and chained incremental update support
+* Improved system blur effects and rendering
+* Updated system font mappings to Google Sans Flex
+* Restored Android 12 style gesture navigation bar
+* Restored and improved statusbar customizations, fullscreen app controls, mock location controls, and per-app GPU composition
+* Fixed VoLTE not reconnecting after VoWiFi handover
+* Fixed fingerprint icon and prompt alignment when rotating the screen
+* Updated Pixel Launcher, Google apps, and Pixel wallpaper packages
+* Various under-the-hood bug fixes, security improvements, and optimizations
+
 ===== 06 Oct 2026 =====
 
 * Android 17 QPR0 Oct Release
