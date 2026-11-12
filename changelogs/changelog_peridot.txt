@@ -3,9 +3,32 @@ Build type: Stable
 Device: POCO F6 / Redmi Turbo 3
 Device maintainer: Farrukh2002
 
+===== 12 November 2026 =====
+
+* Fix Bluetooth audio output routing.
+* Enable LHDC in Bluetooth audio policy.
+* Fix Dolby audio library compatibility and app access to Dolby services.
+* Fix camera issues in Google Pay and FamApp by restricting auxiliary-camera access.
+* Fix manual Ulquiorra mode selections being overridden by per-app game profiles.
+* Keep Ulquiorra Manager persistent for mode handling.
+* Tune Ulquiorra CPU governor and cluster settings.
+* Tune SurfaceFlinger timings at 90Hz and adjust the display idle timer.
+* Remove the forced 120Hz lock-screen refresh rate.
+* Adjust audio thread CPU affinity.
+* Correct the order of scheduler migration-threshold configuration.
+* Enable the USAP pool and configure dex2oat to use five threads on big cores.
+* Update CPU architecture and runtime optimisation targets.
+* Remove unused density-based Dalvik heap overrides.
+* Switch to the QTI thermal HAL and correct the skin-temperature sensor selection.
+* Remove the obsolete thermal service startup wait and restart.
+* Focaltech: fix invalid touch points causing the entire touch frame to be discarded.
+* Reduce amplifier driver monitor logging.
+* Add region-specific attestation product properties.
+* Remove unused vendor blobs thus reducing final zip by 250 MB.
+
 ===== 20 October 2026 =====
 
-* Hotfix build the adress the issues below.
+* Hotfix build to address the issues below.
 * Fix MiUi Camera and move to Leica Cam (credits @phoenix ).
 * Change from stock dolby to custom dolby implementation from AOSPA (credits @userarii ).
 * Add back ulquiorra tile.
