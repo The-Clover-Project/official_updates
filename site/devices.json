@@ -29,8 +29,8 @@
     "image": "images/devices/asteroids.png",
     "heroImage": "images/devices/download/asteroids.png",
     "released": true,
-    "version": "4.0-HOTFIX",
-    "datetime": 1792605386,
+    "version": "4.1",
+    "datetime": 1794555389,
     "variants": [
       "gms",
       "vanilla"
