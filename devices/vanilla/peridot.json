@@ -1,20 +1,29 @@
 {
   "response": [
     {
-      "datetime": 1794485850,
-      "filename": "CloverProject-4.1-20261112-OFFICIAL-peridot-VANILLA.zip",
-      "id": "f1c920e3382b028ec6707bdb1dc3c38c42716568040836132047d0c8586820ba",
-      "md5": "0f8081ef8e306d0825d8555e15809705",
-      "size": 2325304271,
-      "url": "https://ota.thecloverproject.com/peridot/4.1/CloverProject-4.1-20261112-OFFICIAL-peridot-VANILLA.zip",
+      "datetime": 1794535031,
+      "filename": "CloverProject-4.1-20261113-OFFICIAL-peridot-VANILLA.zip",
+      "id": "95a6d78670ac7caeb3b5c25df9c22a970f9c53bd7dd3416d64fd830ac151826e",
+      "md5": "f5b3a716be0d9891586d499833114b0b",
+      "size": 2325292212,
+      "url": "https://ota.thecloverproject.com/peridot/4.1/CloverProject-4.1-20261113-OFFICIAL-peridot-VANILLA.zip",
       "version": "4.1",
       "romtype": "official",
       "devicename": "POCO F6 / Redmi Turbo 3",
       "maintainer": "Farrukh2002",
       "os_sdk_level": 37,
       "os_patch_level": "2026-11-05",
-      "ota_property_files": "payload_metadata.bin:5245:192421,payload.bin:5245:2325295592,payload_properties.txt:2325300895:156,apex_info.pb:2357:1509,care_map.pb:3913:1285,metadata:69:717,metadata.pb:854:1455",
-      "ota_id": "067aad31a99b9215"
+      "ota_property_files": "payload_metadata.bin:5245:192421,payload.bin:5245:2325283533,payload_properties.txt:2325288836:156,apex_info.pb:2357:1509,care_map.pb:3913:1285,metadata:69:717,metadata.pb:854:1455",
+      "ota_id": "0dd378dc0da154d9",
+      "incrementals": [
+        {
+          "from": "067aad31a99b9215",
+          "to": "0dd378dc0da154d9",
+          "url": "https://ota.thecloverproject.com/peridot/incremental/CloverProject-4.1-OFFICIAL-peridot-VANILLA-067aad31-to-0dd378dc.zip",
+          "size": 27387795,
+          "sha256": "12f8598e0bf45875c66f848a9e4cfe102d933a1c2311060f765ea306ec1c3dd4"
+        }
+      ]
     }
   ]
 }
