@@ -5,5 +5,11 @@
   "ver_dirty_allowed": [
     "4.1"
   ],
-  "devices": {}
+  "devices": {
+    "asteroids": {
+      "ver_clean_required": [
+        "4.1"
+      ]
+    }
+  }
 }

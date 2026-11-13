@@ -9,55 +9,39 @@
   "installationGuide": {
     "steps": [
       {
-        "title": "Unlock Bootloader",
-        "description": "Ensure your device's bootloader is unlocked before proceeding."
+        "title": "Prerequisites",
+        "description": "• Ensure your device's <b>bootloader is unlocked</b>.<br>• <b>Backup your data!</b> A clean flash will wipe all data.<br>• Use official latest <b>Google Platform-Tools</b> (avoid outdated Minimal ADB/Fastboot).<br>• <i>Note: Separate images like boot.img, dtbo.img, vendor_boot.img, and init_boot.img are <b>NOT required</b>.</i>"
       },
       {
-        "title": "Reboot To Bootloader",
-        "description": "Reboot to Bootloader/Fastboot by pressing Vol Down + Power Button."
+        "title": "Reboot to Bootloader",
+        "description": "Connect your phone via USB and reboot to Bootloader by typing:<pre><code>adb reboot bootloader</code></pre>Alternatively, power off the phone and hold <b>Volume Down + Power</b>."
       },
       {
-        "title": "Connection",
-        "description": "Open CMD or Terminal on your PC and connect your phone via USB."
+        "title": "Reboot to FastbootD",
+        "description": "From bootloader mode, reboot to FastbootD by typing:<pre><code>fastboot reboot fastboot</code></pre>"
       },
       {
-        "title": "Reboot To FastbootD",
-        "description": "Reboot to FastbootD by typing:<pre><code>fastboot reboot fastboot</code></pre>"
+        "title": "Flash Recovery (Only Required if Coming from Stock NothingOS)",
+        "description": "If coming from Stock Nothing OS, flash the recovery image:<pre><code>fastboot flash recovery recovery.img</code></pre>Then reboot into the new recovery's FastbootD mode:<pre><code>fastboot reboot bootloader\nfastboot reboot fastboot</code></pre><i>(Skip this step if coming from another custom ROM or dirty updating).</i>"
       },
       {
-        "title": "Install Core System Files",
-        "description": "Flash core partitions by typing:<pre><code>fastboot flash boot boot.img\nfastboot flash dtbo dtbo.img\nfastboot flash vendor_boot vendor_boot.img\nfastboot flash init_boot init_boot.img\nfastboot flash recovery recovery.img</code></pre>"
+        "title": "Wipe Super Partition (Only Required if Coming from Stock or Another ROM that is not using 6.1 kernel)",
+        "description": "While in FastbootD mode, wipe the super partition by typing:<pre><code>fastboot wipe-super super_empty.img</code></pre><i>(Required for clean flash when coming from Stock or another ROM; skip if dirty updating).</i>"
       },
       {
-        "title": "Reboot To Bootloader",
-        "description": "Reboot into Bootloader by typing:<pre><code>fastboot reboot bootloader</code></pre>"
+        "title": "Reboot to Recovery",
+        "description": "Reboot into Recovery mode by typing:<pre><code>fastboot reboot recovery</code></pre>"
       },
       {
-        "title": "Reboot To FastbootD Of New Recovery",
-        "description": "Reboot to FastbootD by typing:<pre><code>fastboot reboot fastboot</code></pre>"
+        "title": "Sideload Clover ROM",
+        "description": "In recovery, navigate to <b>Apply Update → Apply from ADB</b>, then sideload the ROM by typing:<pre><code>adb sideload CloverProject*.zip</code></pre>• <i>Note: Sideload progress frequently pauses at 47% or 94% — this is completely normal.</i><br>• If prompted to install additional packages, choose <b>No</b>."
       },
       {
-        "title": "Wipe Super",
-        "description": "Wipe Super by typing:<pre><code>fastboot wipe-super super_empty.img</code></pre>"
+        "title": "Factory Reset / Format Data",
+        "description": "From the main recovery menu, select <b>Factory Reset → Format data/factory reset</b> and confirm.<br><i>(Skip this step if you are dirty updating / upgrading from an earlier build of this ROM).</i>"
       },
       {
-        "title": "Reboot To Bootloader",
-        "description": "Reboot into Bootloader (again) by typing:<pre><code>fastboot reboot bootloader</code></pre>"
-      },
-      {
-        "title": "Reboot To Recovery",
-        "description": "Reboot into Recovery by typing:<pre><code>fastboot reboot recovery</code></pre>"
-      },
-      {
-        "title": "Flash Clover ROM",
-        "description": "In recovery, navigate to <b>Apply Update → Apply from ADB</b>, then sideload the ROM by typing:<pre><code>adb sideload CloverProject*.zip</code></pre>If prompted to install additional packages, choose <b>No</b>."
-      },
-      {
-        "title": "Wipe Data",
-        "description": "From the main recovery menu, select <b>Factory Reset → Format data/factory reset</b>. (Skip this step if you are dirty updating from an earlier build of this ROM)."
-      },
-      {
-        "title": "Reboot",
+        "title": "Reboot to System",
         "description": "Select <b>Reboot system now</b>. The first boot may take a few minutes. Enjoy Clover!"
       }
     ],

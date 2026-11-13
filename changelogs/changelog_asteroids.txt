@@ -3,6 +3,17 @@ Build type: Stable
 Device: Nothing Phone 3a/Pro
 Device maintainer: NayanYC
 
+=== 13/11/26 ===
+
+* Switched to 6.1 Kernel
+* Shipped with NT camera
+* Optimized kernel
+* Improved fingerprint sensor responsiveness and wake-up
+* Removed double tap to wake in favor of native single tap to wake
+* November Security Patch
+* Update firmware/vendor to Asteroids-C5.0-261023-2146
+* Improved dolby
+
 === 22/10/26 ===
 
 * Added pocket mode.
