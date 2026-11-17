@@ -10,8 +10,8 @@
     "image": "images/devices/alioth.png",
     "heroImage": "images/devices/download/alioth.png",
     "released": true,
-    "version": "4.0",
-    "datetime": 1791871598,
+    "version": "4.1",
+    "datetime": 1794908800,
     "variants": [
       "gms",
       "vanilla"
