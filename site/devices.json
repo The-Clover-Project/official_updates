@@ -67,8 +67,8 @@
     "image": "images/devices/onyx.png",
     "heroImage": "images/devices/download/onyx.png",
     "released": true,
-    "version": "4.0",
-    "datetime": 1792053717,
+    "version": "4.1",
+    "datetime": 1794683159,
     "variants": [
       "gms",
       "vanilla"
