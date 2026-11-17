@@ -1,19 +1,20 @@
 {
   "response": [
     {
-      "datetime": 1791871598,
-      "filename": "CloverProject-4.0-20261013-OFFICIAL-alioth-GMS.zip",
-      "id": "52645e08da455cc94a16067f047c3c8e100c7b9c7b577ddf886b517ab424516c",
-      "md5": "7d5918b59e9a33df6e447494ea83e3c2",
-      "size": 2891276658,
-      "url": "https://ota.thecloverproject.com/alioth/4.0/CloverProject-4.0-20261013-OFFICIAL-alioth-GMS.zip",
-      "version": "4.0",
+      "datetime": 1794908800,
+      "filename": "CloverProject-4.1-20261117-OFFICIAL-alioth-GMS.zip",
+      "id": "23650bc433c039eb21361f64dadb7c40f20c95208c7ecf392015a7a944d40986",
+      "md5": "814b4a84e6cf445b590af7949ba19c93",
+      "size": 2981692535,
+      "url": "https://ota.thecloverproject.com/alioth/4.1/CloverProject-4.1-20261117-OFFICIAL-alioth-GMS.zip",
+      "version": "4.1",
       "romtype": "official",
       "devicename": "Mi 11x / Poco F3",
       "maintainer": "Perses",
       "os_sdk_level": 37,
-      "os_patch_level": "2026-10-05",
-      "ota_property_files": "payload_metadata.bin:4118:190238,payload.bin:4118:2891269106,payload_properties.txt:2891273282:156,apex_info.pb:1960:1448,care_map.pb:3455:616,metadata:69:681,metadata.pb:818:1094"
+      "os_patch_level": "2026-11-05",
+      "ota_property_files": "payload_metadata.bin:4170:201191,payload.bin:4170:2981684931,payload_properties.txt:2981689159:156,apex_info.pb:2012:1448,care_map.pb:3507:616,metadata:69:705,metadata.pb:842:1122",
+      "ota_id": "f4b05d3a4ec643f4"
     }
   ]
 }
