@@ -3,6 +3,14 @@ Build type: Stable
 Device: Poco F3/ Mi 11x
 Device maintainer: Perses
 
+===== 17 November 2026 =====
+
+* pocketmode: Adapt for Android 17
+* Implemente Richtap haptics (credit: @johnmart19)
+* Implement Charging control
+* Implement VPP Picture Engine (credit: @Tkiliay)
+* Implement MIUI color modes
+
 ===== 13 October 2026 =====
 
 * Initial A17 QPR0 release
