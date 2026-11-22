@@ -3,6 +3,30 @@ Build type: Stable
 Device: POCO X7 Pro / Redmi Turbo 4
 Device maintainer: RAM-UNLOK
 
+===== 22 November 2026 =====
+
+* Update blobs to OS3.0.304.0.WOJMIXM
+* Updated MIUI Camera to v6.7.000500.0 (dropped Leica features)
+* Reworked and redesigned Xiaomi Parts (migrated PerAppProfileService from deprecated APIs and applied latest patches)
+* Fixed black screen camera issue in Google Pay and Chrome
+* Patched AidlCameraDeviceCallback to prevent aborts on empty metadata
+* Dropped secure video encoders to fix screen sharing on Discord
+* Fixed static noise and crackling artifacts in game voice chat
+* Built Bluetooth audio from source and patched libsink-mtk.so with libaudioclient_shim.so
+* Disabled fpsop game effects and BT MiSound
+* Fixed libperfmgr powerhint state for low-latency audio streaming
+* Optimized UI rendering performance and adjusted display properties
+* Set correct boot animation screen resolution
+* Enabled MM zRAM daemon support
+* Retuned LMK and protected init from OOM kills
+* Reverted common MediaTek IMS switch, updated IMS patches, and built minimal MediaTek telecom/telephony JARs
+* Dropped HIDL LBS and netdagent (built from source)
+* Fixed OTA Updater and boot control permissions for user builds
+* Enabled fastbootd by default
+* Fixed /dev/ufs-bsg0 ownership and moved mtk_platform_codecs_config.xml to the device tree
+* Synced init permissions with stock and inherited device properties
+* Migrated to common MediaTek vendor sepolicy and addressed SELinux denials (SmartPA calibration, audio feedback, fingerprint calibration, batteryinfo, CPU control, and Treble compliance for Xiaomi Parts)
+
 ===== 19 October 2026 =====
 
 * Update blobs to OS3.0.303.0.WOJMIXM
